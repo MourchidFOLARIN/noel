@@ -234,56 +234,70 @@
     }
 
     /* ==========================================================================
-       2. EN-TÊTE STICKY
+       2. EN-TÊTE STICKY HAUT DE GAMME
        ========================================================================== */
     .site-header {
       position: sticky;
       top: 0;
-      background: rgba(251, 246, 236, 0.96);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(251, 246, 236, 0.98);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       z-index: 900;
-      transition: var(--transition);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .site-header .container {
+      max-width: 1400px;
+      padding: 0 24px;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
+      height: 78px;
+      gap: 16px;
     }
 
-    /* Logo */
+    /* Logo Maison Noëlia */
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-group {
+      display: flex;
+      flex-direction: column;
     }
 
     .logo-text {
       font-family: var(--font-title);
-      font-size: 2.1rem;
+      font-size: 2.15rem;
       font-weight: 700;
       color: var(--color-sapin);
       letter-spacing: -0.02em;
       line-height: 1;
     }
 
-    .logo-sparkle {
-      color: var(--color-or);
-      font-size: 1.4rem;
-      animation: sparkleRotate 6s infinite linear;
-    }
-
     .logo-sub {
       display: block;
-      font-size: 0.65rem;
+      font-size: 0.63rem;
       text-transform: uppercase;
       letter-spacing: 0.22em;
       color: var(--color-bordeaux);
       font-weight: 800;
       margin-top: 2px;
+    }
+
+    .logo-sparkle {
+      color: var(--color-or);
+      font-size: 1.3rem;
+      animation: sparkleRotate 6s infinite linear;
+      display: inline-block;
     }
 
     @keyframes sparkleRotate {
@@ -292,20 +306,26 @@
       100% { transform: rotate(360deg) scale(1); }
     }
 
-    /* Navigation */
+    /* Navigation principale (Liens horizontaux stricts mono-ligne) */
     .site-nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: clamp(14px, 1.8vw, 28px);
+      margin: 0 auto;
     }
 
     .nav-link {
-      font-size: 0.95rem;
+      font-size: 0.91rem;
       font-weight: 600;
       color: var(--color-sapin);
       position: relative;
       padding: 6px 0;
-      transition: var(--transition);
+      white-space: nowrap; /* GARANTIE ABSOLUE: aucun mot ne passe à la ligne */
+      text-decoration: none;
+      transition: color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
     .nav-link::after {
@@ -315,9 +335,9 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--color-rouge-noel);
-      transition: var(--transition);
-      border-radius: var(--radius-full);
+      background: linear-gradient(90deg, var(--color-rouge-noel), var(--color-or));
+      transition: width 0.25s ease;
+      border-radius: 2px;
     }
 
     .nav-link:hover {
@@ -328,33 +348,134 @@
       width: 100%;
     }
 
-    /* Header Actions */
+    /* Actions Header (Ambiance + Hotte + Panier) */
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
+      flex-shrink: 0;
     }
 
+    /* Capsule Ambiance Sensorielle (Veillée & Mélodie) */
+    .ambient-capsule {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(201, 165, 92, 0.12);
+      border: 1px solid rgba(201, 165, 92, 0.4);
+      border-radius: var(--radius-full);
+      padding: 3px 4px;
+      gap: 2px;
+      transition: var(--transition);
+    }
+
+    .ambient-capsule-btn {
+      background: transparent;
+      border: none;
+      color: var(--color-sapin);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .ambient-capsule-btn:hover {
+      background: rgba(201, 165, 92, 0.25);
+      color: var(--color-bordeaux);
+    }
+
+    .ambient-capsule-btn.active {
+      background: var(--color-or);
+      color: var(--color-sapin-dark);
+      box-shadow: 0 2px 8px rgba(201, 165, 92, 0.4);
+    }
+
+    .capsule-sep {
+      width: 1px;
+      height: 16px;
+      background: rgba(201, 165, 92, 0.35);
+      margin: 0 1px;
+    }
+
+    /* Bouton Wishlist Hotte de Rêves */
+    .wishlist-nav-btn {
+      background: rgba(201, 165, 92, 0.12);
+      border: 1px solid rgba(201, 165, 92, 0.4);
+      color: var(--color-sapin);
+      padding: 7px 13px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .wishlist-nav-btn:hover {
+      background: rgba(201, 165, 92, 0.25);
+      border-color: var(--color-or);
+      color: var(--color-bordeaux);
+      transform: translateY(-1px);
+    }
+
+    .wish-nav-icon {
+      color: #C0392B;
+      font-size: 0.95rem;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .wishlist-nav-btn:hover .wish-nav-icon {
+      transform: scale(1.2);
+    }
+
+    .wishlist-count-badge {
+      background: var(--color-or);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      min-width: 19px;
+      height: 19px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      line-height: 1;
+    }
+
+    /* Bouton Panier Principal (Conversion CTA) */
     .cart-btn {
       position: relative;
       background: var(--color-sapin);
       color: #FFFFFF;
-      padding: 10px 18px;
+      padding: 9px 18px;
       border-radius: var(--radius-full);
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: var(--shadow-sm);
+      font-size: 0.88rem;
+      box-shadow: 0 3px 12px rgba(15, 61, 46, 0.25);
       transition: var(--transition);
-      border: 1px solid rgba(201, 165, 92, 0.4);
+      border: 1px solid rgba(201, 165, 92, 0.45);
+      white-space: nowrap;
+      cursor: pointer;
     }
 
     .cart-btn:hover {
       background: var(--color-rouge-noel);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(214, 40, 57, 0.3);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(214, 40, 57, 0.35);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
     .cart-count-badge {
@@ -3272,6 +3393,233 @@ body.veillee-mode .btn-print-recipe {
   }
 }
 
+
+    /* Bouton Menu Burger Mobile & Tablette */
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      background: rgba(201, 165, 92, 0.12);
+      border: 1px solid rgba(201, 165, 92, 0.35);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .mobile-menu-btn:hover {
+      background: rgba(201, 165, 92, 0.25);
+    }
+
+    .burger-line {
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-sapin);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Drawer Menu Mobile */
+    .mobile-nav-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-nav-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 320px;
+      max-width: 85vw;
+      background: var(--color-creme);
+      z-index: 1001;
+      transform: translateX(-100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 4px 0 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      border-right: 2px solid var(--color-or);
+    }
+
+    .mobile-nav-drawer.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border-bottom: 1px solid var(--color-border);
+      background: rgba(201, 165, 92, 0.08);
+    }
+
+    .mobile-nav-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .mobile-nav-item:hover {
+      background: rgba(201, 165, 92, 0.15);
+      color: var(--color-rouge-noel);
+      transform: translateX(4px);
+    }
+
+    .mobile-nav-extra {
+      background: rgba(201, 165, 92, 0.1);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .mobile-extra-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-bordeaux);
+      font-weight: 800;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .mobile-ambient-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .mobile-nav-reassurance {
+      margin-top: auto;
+      padding: 14px;
+      background: rgba(15, 61, 46, 0.06);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--color-sapin);
+    }
+
+    /* Adaptations Veillée Mode pour la nouvelle Navbar */
+    body.veillee-mode .ambient-capsule {
+      background: rgba(201, 165, 92, 0.1);
+      border-color: rgba(201, 165, 92, 0.35);
+    }
+    body.veillee-mode .ambient-capsule-btn {
+      color: #FBF6EC;
+    }
+    body.veillee-mode .capsule-sep {
+      background: rgba(201, 165, 92, 0.3);
+    }
+    body.veillee-mode .wishlist-nav-btn {
+      background: rgba(201, 165, 92, 0.1);
+      color: #FBF6EC;
+      border-color: rgba(201, 165, 92, 0.35);
+    }
+    body.veillee-mode .burger-line {
+      background-color: #FBF6EC;
+    }
+    body.veillee-mode .mobile-nav-drawer {
+      background: #081813;
+      color: #FBF6EC;
+    }
+    body.veillee-mode .mobile-nav-item {
+      color: #FBF6EC;
+    }
+    body.veillee-mode .mobile-nav-item:hover {
+      background: rgba(201, 165, 92, 0.15);
+      color: #FFDE94;
+    }
+    body.veillee-mode .mobile-nav-extra {
+      background: #0e271f;
+      border-color: rgba(201, 165, 92, 0.3);
+    }
+    body.veillee-mode .mobile-nav-header {
+      background: rgba(201, 165, 92, 0.05);
+      border-bottom-color: rgba(201, 165, 92, 0.3);
+    }
+    body.veillee-mode .mobile-nav-reassurance {
+      background: rgba(255, 255, 255, 0.05);
+      border-left-color: var(--color-or);
+    }
+
+    /* Breakpoints Responsives Spécifiques Navbar */
+    @media (max-width: 1250px) {
+      .capsule-text {
+        display: none; /* Affiche uniquement l'icône 🕯️ | 🔔 */
+      }
+      .wish-nav-label {
+        display: none; /* Affiche uniquement le cœur ♡ et le compteur */
+      }
+      .site-nav {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .site-nav {
+        display: none; /* Passe dans le tiroir burger */
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+      .cart-btn-label {
+        display: none; /* Icône + badge sur tablette et mobile */
+      }
+      .cart-btn {
+        padding: 9px 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo-text {
+        font-size: 1.7rem;
+      }
+      .logo-sub {
+        font-size: 0.55rem;
+      }
+      .ambient-capsule {
+        display: none; /* Sur mobile, accessible directement dans le tiroir */
+      }
+      .header-actions {
+        gap: 8px;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -3325,14 +3673,16 @@ body.veillee-mode .btn-print-recipe {
        ========================================================================== -->
   <header class="site-header">
     <div class="container header-inner">
+      <!-- Logo Maison Noëlia -->
       <a href="#" class="brand-logo" aria-label="Noëlia Boutique de Noël Accueil">
-        <div>
+        <div class="logo-group">
           <span class="logo-text">Noëlia</span>
           <span class="logo-sub">Paris · Maison de Noël</span>
         </div>
         <span class="logo-sparkle" aria-hidden="true">✦</span>
       </a>
 
+      <!-- Navigation Principale (Mono-ligne stricte, espacement luxueux) -->
       <nav class="site-nav" aria-label="Navigation principale">
         <a href="#guide" class="nav-link">Guide Cadeaux</a>
         <a href="#offres-flash" class="nav-link">Offres Flash</a>
@@ -3342,26 +3692,105 @@ body.veillee-mode .btn-print-recipe {
         <a href="#secrets-fete" class="nav-link">Recettes</a>
       </nav>
 
+      <!-- Actions de l'En-tête (Capsule Sensorielle + Hotte + Panier + Burger) -->
       <div class="header-actions">
-        <div class="header-toggles-group">
-          <button class="ambient-btn" id="btnThemeToggle" title="Bascule Veillée de Noël aux chandelles">
-            <span>🕯️</span><span id="themeToggleText">Veillée</span>
+        <!-- Capsule Sensorielle Festive (Veillée & Mélodie) -->
+        <div class="ambient-capsule" role="group" aria-label="Ambiance sensorielle">
+          <button class="ambient-capsule-btn" id="btnThemeToggle" title="Mode Veillée aux chandelles" aria-label="Mode Veillée aux chandelles">
+            <span>🕯️</span><span id="themeToggleText" class="capsule-text">Veillée</span>
           </button>
-          <button class="ambient-btn" id="btnAudioToggle" title="Mélodie de fête féerique">
-            <span>🔔</span><span id="audioToggleText">Mélodie</span>
-          </button>
-          <button class="ambient-btn" id="btnWishlistOpen" title="Ma Hotte de Rêves (Wishlist)">
-            <span>♡</span><span>Hotte (<span id="wishlistCountHeader">0</span>)</span>
+          <span class="capsule-sep" aria-hidden="true"></span>
+          <button class="ambient-capsule-btn" id="btnAudioToggle" title="Mélodie de Noël féerique" aria-label="Mélodie de fête">
+            <span>🔔</span><span id="audioToggleText" class="capsule-text">Mélodie</span>
           </button>
         </div>
+
+        <!-- Hotte de Rêves (Wishlist) -->
+        <button class="wishlist-nav-btn" id="btnWishlistOpen" title="Ma Hotte de Rêves" aria-label="Ma Hotte de Rêves">
+          <span class="wish-nav-icon">♡</span>
+          <span class="wish-nav-label">Hotte</span>
+          <span class="wishlist-count-badge" id="wishlistCountHeader">0</span>
+        </button>
+
+        <!-- Bouton Panier Principal (Conversion CTA) -->
         <button class="cart-btn" id="openCartBtn" aria-label="Ouvrir le panier">
           <span aria-hidden="true">🎁</span>
-          <span>Panier</span>
+          <span class="cart-btn-label">Panier</span>
           <span class="cart-count-badge" id="headerCartCount">0</span>
+        </button>
+
+        <!-- Bouton Menu Burger Mobile & Tablette -->
+        <button class="mobile-menu-btn" id="btnMobileMenuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- TIROIR MENU MOBILE FÉERIQUE -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="logo-group">
+          <span class="logo-text" style="font-size:1.8rem;">Noëlia</span>
+          <span class="logo-sub">Maison de Noël</span>
+        </div>
+        <span class="logo-sparkle">✦</span>
+      </div>
+      <button class="btn-close-modal" id="btnCloseMobileNav" aria-label="Fermer le menu">✕</button>
+    </div>
+    
+    <div class="mobile-nav-body">
+      <nav class="mobile-nav-links">
+        <a href="#guide" class="mobile-nav-item">
+          <span>✦</span><span>Guide Cadeaux</span>
+        </a>
+        <a href="#offres-flash" class="mobile-nav-item">
+          <span>⚡</span><span>Offres Flash de Noël</span>
+        </a>
+        <a href="#categories" class="mobile-nav-item">
+          <span>🎄</span><span>Catégories</span>
+        </a>
+        <a href="#catalogue" class="mobile-nav-item">
+          <span>🎁</span><span>Collection Cadeaux</span>
+        </a>
+        <a href="#avis" class="mobile-nav-item">
+          <span>⭐</span><span>Avis Clients</span>
+        </a>
+        <a href="#secrets-fete" class="mobile-nav-item">
+          <span>📖</span><span>Secrets & Recettes</span>
+        </a>
+      </nav>
+
+      <div class="mobile-nav-extra">
+        <div class="mobile-extra-title">✦ Expérience Féerique ✦</div>
+        <div class="mobile-ambient-row">
+          <button class="ambient-capsule-btn" id="btnThemeToggleMobile" style="border:1px solid var(--color-border); padding:8px 12px; justify-content:center; width:100%;">
+            <span>🕯️</span><span>Veillée</span>
+          </button>
+          <button class="ambient-capsule-btn" id="btnAudioToggleMobile" style="border:1px solid var(--color-border); padding:8px 12px; justify-content:center; width:100%;">
+            <span>🔔</span><span>Mélodie</span>
+          </button>
+        </div>
+        <button class="wishlist-nav-btn" id="btnWishlistOpenMobile" style="width:100%; margin-top:10px; justify-content:center; padding:10px;">
+          <span class="wish-nav-icon">♡</span><span>Ma Hotte de Rêves (<span id="wishlistCountMobile">0</span>)</span>
+        </button>
+        <button class="btn btn-secondary" id="btnOpenWheelMobile" style="width:100%; margin-top:10px; justify-content:center; padding:10px;">
+          <span>🎡</span><span>Roue des Merveilles</span>
+        </button>
+      </div>
+
+      <div class="mobile-nav-reassurance">
+        <div style="font-size:0.85rem; font-weight:700; color:var(--color-sapin); margin-bottom:4px;">✨ Maison de Noël Parisienne</div>
+        <p style="font-size:0.78rem; color:var(--color-text-muted); line-height:1.4; margin:0;">
+          Colissimo suivi 48h garanti avant le 24 décembre pour toute commande avant le 18 déc.
+        </p>
+      </div>
+    </div>
+  </aside>
 
   <main>
     <!-- ==========================================================================
@@ -5706,6 +6135,87 @@ body.veillee-mode .btn-print-recipe {
       originalAddToCart(productId, openNow);
       AudioEngine.playChime();
     };
+
+  
+    // ==========================================================================
+    // GESTION DU MENU MOBILE & SYNCHRONISATION
+    // ==========================================================================
+    const btnMobileMenuToggle = document.getElementById("btnMobileMenuToggle");
+    const mobileNavDrawer = document.getElementById("mobileNavDrawer");
+    const mobileNavBackdrop = document.getElementById("mobileNavBackdrop");
+    const btnCloseMobileNav = document.getElementById("btnCloseMobileNav");
+
+    function openMobileNav() {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.add("active");
+      mobileNavBackdrop.classList.add("active");
+      mobileNavDrawer.setAttribute("aria-hidden", "false");
+      btnMobileMenuToggle.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMobileNav() {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.remove("active");
+      mobileNavBackdrop.classList.remove("active");
+      mobileNavDrawer.setAttribute("aria-hidden", "true");
+      btnMobileMenuToggle.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    if (btnMobileMenuToggle) btnMobileMenuToggle.addEventListener("click", openMobileNav);
+    if (btnCloseMobileNav) btnCloseMobileNav.addEventListener("click", closeMobileNav);
+    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener("click", closeMobileNav);
+
+    // Fermer le menu lors du clic sur un lien
+    document.querySelectorAll(".mobile-nav-item").forEach(link => {
+      link.addEventListener("click", () => {
+        closeMobileNav();
+      });
+    });
+
+    // Synchronisation boutons Veillée & Mélodie dans le drawer mobile
+    const btnThemeToggleMobile = document.getElementById("btnThemeToggleMobile");
+    const btnAudioToggleMobile = document.getElementById("btnAudioToggleMobile");
+    const btnWishlistOpenMobile = document.getElementById("btnWishlistOpenMobile");
+    const btnOpenWheelMobile = document.getElementById("btnOpenWheelMobile");
+
+    if (btnThemeToggleMobile) {
+      btnThemeToggleMobile.addEventListener("click", () => {
+        btnThemeToggle.click();
+        btnThemeToggleMobile.classList.toggle("active", document.body.classList.contains("veillee-mode"));
+      });
+    }
+
+    if (btnAudioToggleMobile) {
+      btnAudioToggleMobile.addEventListener("click", () => {
+        btnAudioToggle.click();
+        btnAudioToggleMobile.classList.toggle("active", AudioEngine.musicPlaying);
+      });
+    }
+
+    if (btnWishlistOpenMobile) {
+      btnWishlistOpenMobile.addEventListener("click", () => {
+        closeMobileNav();
+        btnWishlistOpen.click();
+      });
+    }
+
+    if (btnOpenWheelMobile) {
+      btnOpenWheelMobile.addEventListener("click", () => {
+        closeMobileNav();
+        document.getElementById("btnOpenWheel").click();
+      });
+    }
+
+    // Synchronisation du compteur wishlist mobile
+    const originalUpdateWishlistCount = updateWishlistCount;
+    updateWishlistCount = function() {
+      originalUpdateWishlistCount();
+      const mobileBadge = document.getElementById("wishlistCountMobile");
+      if (mobileBadge) mobileBadge.textContent = wishlist.length;
+    };
+    updateWishlistCount();
 
   </script>
 
