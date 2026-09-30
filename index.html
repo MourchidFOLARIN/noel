@@ -1,0 +1,4632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noëlia | Magie de Noël 2026 · Cadeaux d'Exception & Décoration Festive</title>
+  <meta name="description" content="Boutique féerique Noëlia Paris : découvrez notre collection exclusive de cadeaux de Noël 2026, décorations artisanales et délices de fête. Jusqu'à -40%, livraison offerte dès 60€ et garantie avant le 24 décembre.">
+  <meta name="theme-color" content="#7A0F1F">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Noëlia | La Magie de Noël 2026">
+  <meta property="og:description" content="Faites de Noël un souvenir qu'on n'oublie pas. Jusqu'à -40% et livraison garantie avant le 24 décembre.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts : Fraunces & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       VARIABLES CSS & DESIGN SYSTEM NOËLIA
+       ========================================================================== */
+    :root {
+      --color-bordeaux: #7A0F1F;
+      --color-bordeaux-dark: #580814;
+      --color-sapin: #0F3D2E;
+      --color-sapin-dark: #09261C;
+      --color-creme: #FBF6EC;
+      --color-creme-warm: #F4ECE0;
+      --color-or: #C9A55C;
+      --color-or-light: #E7D39F;
+      --color-or-dark: #A38038;
+      --color-rouge-noel: #D62839;
+      --color-rouge-hover: #B01F2F;
+      --color-text: #221D1D;
+      --color-text-muted: #6E645F;
+      --color-card-bg: #FFFFFF;
+      --color-border: rgba(201, 165, 92, 0.25);
+      --font-title: 'Fraunces', Georgia, serif;
+      --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 2px 8px rgba(15, 61, 46, 0.06);
+      --shadow-md: 0 8px 24px rgba(122, 15, 31, 0.08);
+      --shadow-lg: 0 16px 40px rgba(15, 61, 46, 0.14);
+      --shadow-glow: 0 0 20px rgba(201, 165, 92, 0.45);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--color-creme);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-color: var(--color-creme);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Accessibilité focus */
+    :focus-visible {
+      outline: 3px solid var(--color-or);
+      outline-offset: 2px;
+    }
+
+    /* Container global */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Typographie festive */
+    .title-festive {
+      font-family: var(--font-title);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--color-sapin);
+    }
+
+    .title-festive em {
+      font-style: italic;
+      color: var(--color-bordeaux);
+    }
+
+    .star-gold {
+      color: var(--color-or);
+      font-size: 0.9em;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 6px;
+      filter: drop-shadow(0 0 4px rgba(201, 165, 92, 0.6));
+    }
+
+    /* ==========================================================================
+       GUIRLANDE LUMINEUSE CSS (FAIRY LIGHTS)
+       ========================================================================== */
+    .fairy-lights-garland {
+      position: relative;
+      width: 100%;
+      height: 14px;
+      background: #460912;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(201, 165, 92, 0.3);
+      z-index: 100;
+    }
+
+    .fairy-wire {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(15, 61, 46, 0.7);
+    }
+
+    .bulb {
+      width: 8px;
+      height: 10px;
+      border-radius: 50% 50% 45% 45%;
+      position: relative;
+      animation: bulbTwinkle 1.8s infinite ease-in-out alternate;
+    }
+
+    .bulb:nth-child(odd) {
+      background: #FFD479;
+      box-shadow: 0 2px 8px #FFC83B, 0 0 12px #FFA800;
+      animation-delay: 0.2s;
+    }
+
+    .bulb:nth-child(even) {
+      background: #FF4757;
+      box-shadow: 0 2px 8px #FF4757, 0 0 12px #D62839;
+      animation-delay: 0.9s;
+    }
+
+    .bulb:nth-child(3n) {
+      background: #48DBFB;
+      box-shadow: 0 2px 8px #48DBFB, 0 0 12px #0ABDE3;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes bulbTwinkle {
+      0% { opacity: 0.35; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.15); }
+    }
+
+    /* ==========================================================================
+       1. BANDEAU DÉFILANT (ANNOUNCEMENT TICKER)
+       ========================================================================== */
+    .announcement-bar {
+      background: linear-gradient(90deg, var(--color-bordeaux-dark), var(--color-bordeaux), var(--color-bordeaux-dark));
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(201, 165, 92, 0.4);
+    }
+
+    .announcement-track {
+      display: inline-flex;
+      animation: marquee 32s linear infinite;
+    }
+
+    .announcement-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 28px;
+    }
+
+    .announcement-item span.highlight {
+      color: var(--color-or-light);
+      margin-left: 5px;
+      font-weight: 800;
+    }
+
+    .announcement-item .sep {
+      color: var(--color-or);
+      margin-left: 28px;
+      opacity: 0.7;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       2. EN-TÊTE STICKY
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(251, 246, 236, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      z-index: 900;
+      transition: var(--transition);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    /* Logo */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-text {
+      font-family: var(--font-title);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-sparkle {
+      color: var(--color-or);
+      font-size: 1.4rem;
+      animation: sparkleRotate 6s infinite linear;
+    }
+
+    .logo-sub {
+      display: block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--color-bordeaux);
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    @keyframes sparkleRotate {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.15); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    /* Navigation */
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-sapin);
+      position: relative;
+      padding: 6px 0;
+      transition: var(--transition);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-rouge-noel);
+      transition: var(--transition);
+      border-radius: var(--radius-full);
+    }
+
+    .nav-link:hover {
+      color: var(--color-rouge-noel);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Header Actions */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cart-btn {
+      position: relative;
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(201, 165, 92, 0.4);
+    }
+
+    .cart-btn:hover {
+      background: var(--color-rouge-noel);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(214, 40, 57, 0.3);
+    }
+
+    .cart-count-badge {
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 800;
+      min-width: 22px;
+      height: 22px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .cart-btn:hover .cart-count-badge {
+      background: #FFFFFF;
+      color: var(--color-rouge-noel);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.6rem;
+      color: var(--color-sapin);
+      padding: 4px;
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION (ATTIRER)
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(170deg, #134B39 0%, #0F3D2E 40%, #09261C 100%);
+      color: #FFFFFF;
+      padding: 80px 0 100px;
+      overflow: hidden;
+    }
+
+    /* Flocons de neige hero */
+    .snowflakes-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -20px;
+      color: rgba(255, 255, 255, 0.85);
+      user-select: none;
+      pointer-events: none;
+      font-size: 1rem;
+      animation: snowfall linear infinite;
+    }
+
+    @keyframes snowfall {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(50vh) translateX(25px) rotate(180deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(105vh) translateX(-20px) rotate(360deg);
+        opacity: 0.1;
+      }
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 165, 92, 0.18);
+      border: 1px solid var(--color-or);
+      color: var(--color-or-light);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 22px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: 3.4rem;
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-or-light);
+      font-weight: 500;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: rgba(251, 246, 236, 0.9);
+      margin-bottom: 34px;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(214, 40, 57, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-rouge-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(214, 40, 57, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(251, 246, 236, 0.12);
+      color: #FFFFFF;
+      border: 1px solid var(--color-or);
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-or);
+      color: var(--color-sapin-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Compte à rebours Hero */
+    .hero-countdown-block {
+      background: rgba(9, 38, 28, 0.75);
+      border: 1px solid rgba(201, 165, 92, 0.4);
+      padding: 22px 24px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(8px);
+      max-width: 540px;
+    }
+
+    .countdown-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .countdown-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-or-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #2ECC71;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #2ECC71;
+      animation: pulseLive 1.5s infinite;
+    }
+
+    @keyframes pulseLive {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+
+    .countdown-digits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .digit-box {
+      background: linear-gradient(180deg, #1C4D3D 0%, #0F3325 100%);
+      border: 1px solid rgba(201, 165, 92, 0.3);
+      border-radius: var(--radius-sm);
+      padding: 10px 4px;
+      text-align: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    .digit-val {
+      font-family: var(--font-title);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .digit-unit {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-or-light);
+      font-weight: 600;
+    }
+
+    /* Visuel Hero */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      border: 3px solid rgba(201, 165, 92, 0.5);
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: transform 0.6s ease;
+    }
+
+    .hero-img-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Badge promo pulsant */
+    .floating-discount-badge {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      box-shadow: 0 10px 30px rgba(214, 40, 57, 0.55);
+      border: 3px solid #FFFFFF;
+      animation: pulseBadge 2.4s infinite;
+      z-index: 5;
+    }
+
+    .floating-discount-badge .pct {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      line-height: 0.95;
+    }
+
+    .floating-discount-badge .txt {
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    @keyframes pulseBadge {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(214, 40, 57, 0.7); }
+      70% { transform: scale(1.06); box-shadow: 0 0 0 16px rgba(214, 40, 57, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(214, 40, 57, 0); }
+    }
+
+    .hero-proof-chip {
+      position: absolute;
+      bottom: -16px;
+      left: 20px;
+      background: rgba(251, 246, 236, 0.98);
+      color: var(--color-sapin);
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--color-or);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      z-index: 5;
+    }
+
+    /* ==========================================================================
+       4. GUIDE CADEAUX INTERACTIF (RETENIR)
+       ========================================================================== */
+    .gift-guide-section {
+      padding: 70px 0 50px;
+      background-color: var(--color-creme);
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 800;
+      color: var(--color-bordeaux);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+    }
+
+    .guide-box {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .guide-filters-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 24px;
+    }
+
+    .filter-group-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-chip {
+      background: var(--color-creme);
+      border: 1px solid rgba(15, 61, 46, 0.15);
+      color: var(--color-sapin);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .filter-chip:hover {
+      border-color: var(--color-or);
+      background: #FFFFFF;
+    }
+
+    .filter-chip.active {
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      border-color: var(--color-sapin);
+      box-shadow: 0 4px 12px rgba(15, 61, 46, 0.25);
+    }
+
+    .guide-status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .guide-results-count {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-bordeaux);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .guide-results-count span.badge-num {
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      padding: 2px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+    }
+
+    .btn-reset-filters {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn-reset-filters:hover {
+      color: var(--color-rouge-noel);
+    }
+
+    /* ==========================================================================
+       5. OFFRES FLASH NOËL (URGENCE & VALEUR)
+       ========================================================================== */
+    .flash-offers-section {
+      padding: 60px 0;
+      background: linear-gradient(180deg, var(--color-creme) 0%, var(--color-creme-warm) 100%);
+    }
+
+    .flash-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .flash-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(201, 165, 92, 0.35);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .flash-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-or);
+    }
+
+    .flash-badge-top {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 12px rgba(214, 40, 57, 0.4);
+      z-index: 3;
+    }
+
+    .flash-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: #ECE5D8;
+    }
+
+    .flash-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .flash-card:hover .flash-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .flash-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .flash-countdown-mini {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-rouge-noel);
+      background: rgba(214, 40, 57, 0.08);
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+    }
+
+    .flash-title {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-sapin);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .flash-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .stock-progress-wrap {
+      margin-bottom: 16px;
+    }
+
+    .stock-info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-bordeaux);
+      margin-bottom: 6px;
+    }
+
+    .stock-progress-bar {
+      height: 7px;
+      background: #EFE8DA;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .stock-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #E67E22, var(--color-rouge-noel));
+      border-radius: var(--radius-full);
+      transition: width 0.8s ease;
+    }
+
+    .flash-pricing {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .flash-price-now {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--color-rouge-noel);
+    }
+
+    .flash-price-old {
+      font-size: 0.95rem;
+      text-decoration: line-through;
+      color: #9C9289;
+      font-weight: 500;
+    }
+
+    .btn-flash-add {
+      width: 100%;
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .btn-flash-add:hover {
+      background: var(--color-rouge-noel);
+      box-shadow: 0 6px 16px rgba(214, 40, 57, 0.3);
+    }
+
+    /* ==========================================================================
+       6. CATÉGORIES (EXPLORER)
+       ========================================================================== */
+    .categories-section {
+      padding: 60px 0;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      height: 240px;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      background: #ECE5D8;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-or);
+    }
+
+    .category-card img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 61, 46, 0.1) 0%, rgba(9, 38, 28, 0.88) 100%);
+      z-index: 1;
+    }
+
+    .category-content {
+      position: relative;
+      z-index: 2;
+      color: #FFFFFF;
+    }
+
+    .category-name {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .category-count {
+      font-size: 0.8rem;
+      color: var(--color-or-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================================================
+       7. GRILLE DE 12 PRODUITS (CONVERTIR)
+       ========================================================================== */
+    .products-section {
+      padding: 70px 0;
+      background: var(--color-creme);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 165, 92, 0.28);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-or);
+    }
+
+    .product-img-box {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #ECE5D8;
+    }
+
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-img-box img {
+      transform: scale(1.06);
+    }
+
+    .product-badge-flag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 10px rgba(15, 61, 46, 0.3);
+      z-index: 2;
+    }
+
+    .badge-bestseller {
+      background: var(--color-bordeaux);
+    }
+
+    .badge-stock {
+      background: #E67E22;
+    }
+
+    .badge-discount-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 3px 8px rgba(214, 40, 57, 0.4);
+      z-index: 2;
+    }
+
+    .product-info {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      color: #F39C12;
+      margin-bottom: 6px;
+    }
+
+    .product-rating span.review-count {
+      color: var(--color-text-muted);
+      margin-left: 4px;
+    }
+
+    .product-name {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-sapin);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .product-emotional-line {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      line-height: 1.45;
+      margin-bottom: 14px;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .price-discounted {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-rouge-noel);
+    }
+
+    .price-original {
+      font-size: 0.9rem;
+      text-decoration: line-through;
+      color: #9C9289;
+      font-weight: 500;
+    }
+
+    .product-buttons-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-add-cart {
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-add-cart:hover {
+      background: var(--color-rouge-noel);
+      box-shadow: 0 4px 14px rgba(214, 40, 57, 0.3);
+    }
+
+    .btn-gift-quick {
+      background: rgba(201, 165, 92, 0.12);
+      color: var(--color-sapin-dark);
+      border: 1px dashed var(--color-or);
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-gift-quick:hover {
+      background: var(--color-or);
+      color: #FFFFFF;
+      border-style: solid;
+    }
+
+    /* Message pas de résultat filtre */
+    .empty-filter-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--color-or);
+    }
+
+    /* ==========================================================================
+       8. DERNIER JOUR POUR COMMANDER (URGENCE 18 DÉCEMBRE)
+       ========================================================================== */
+    .urgency-deadline-section {
+      background: linear-gradient(135deg, var(--color-bordeaux-dark) 0%, var(--color-bordeaux) 50%, #4D0913 100%);
+      color: #FFFFFF;
+      padding: 70px 0;
+      position: relative;
+      overflow: hidden;
+      border-top: 2px solid var(--color-or);
+      border-bottom: 2px solid var(--color-or);
+    }
+
+    .urgency-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .urgency-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid var(--color-or-light);
+      color: var(--color-or-light);
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .urgency-title {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .urgency-desc {
+      font-size: 1.1rem;
+      color: rgba(251, 246, 236, 0.92);
+      margin-bottom: 24px;
+      max-width: 580px;
+    }
+
+    .urgency-guarantee-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 165, 92, 0.4);
+      font-size: 0.9rem;
+      color: var(--color-or-light);
+      font-weight: 600;
+    }
+
+    .urgency-timer-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid var(--color-or);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .timer-card-title {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    .timer-digits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .timer-digit-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(201, 165, 92, 0.4);
+      border-radius: var(--radius-sm);
+      padding: 12px 6px;
+    }
+
+    .timer-digit-box .num {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #FFDE94;
+      line-height: 1;
+    }
+
+    .timer-digit-box .lbl {
+      font-size: 0.65rem;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    .btn-secure-order {
+      width: 100%;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      padding: 14px;
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      box-shadow: 0 8px 24px rgba(214, 40, 57, 0.4);
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secure-order:hover {
+      background: #FFFFFF;
+      color: var(--color-bordeaux);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       9. SECTION CONFIANCE & GARANTIES (CONVAINCRE)
+       ========================================================================== */
+    .trust-section {
+      padding: 60px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .trust-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 16px;
+      border-radius: var(--radius-md);
+      background: var(--color-creme);
+      border: 1px solid rgba(201, 165, 92, 0.2);
+      transition: var(--transition);
+    }
+
+    .trust-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--color-or);
+    }
+
+    .trust-icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--color-sapin);
+      color: var(--color-or-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(15, 61, 46, 0.2);
+    }
+
+    .trust-title {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-sapin);
+      margin-bottom: 6px;
+    }
+
+    .trust-text {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       10. AVIS CLIENTS (PREUVE SOCIALE)
+       ========================================================================== */
+    .reviews-section {
+      padding: 70px 0;
+      background: var(--color-creme);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .review-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 28px;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-quote-mark {
+      font-family: var(--font-title);
+      font-size: 3.5rem;
+      color: var(--color-or-light);
+      opacity: 0.45;
+      line-height: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .review-stars {
+      color: #F39C12;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      font-style: italic;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(201, 165, 92, 0.2);
+      padding-top: 14px;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      border: 2px solid var(--color-or);
+    }
+
+    .author-info .name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--color-sapin);
+    }
+
+    .author-info .city {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ==========================================================================
+       11. NEWSLETTER (CAPTURE & PROMO)
+       ========================================================================== */
+    .newsletter-section {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #0F3D2E 0%, #175340 100%);
+      color: #FFFFFF;
+      position: relative;
+    }
+
+    .newsletter-card {
+      background: rgba(9, 38, 28, 0.6);
+      border: 1px solid var(--color-or);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .newsletter-badge {
+      display: inline-block;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .newsletter-title {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-desc {
+      color: rgba(251, 246, 236, 0.9);
+      font-size: 1rem;
+      margin-bottom: 26px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 520px;
+      margin: 0 auto 14px;
+      gap: 10px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 20px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-or-light);
+      background: #FFFFFF;
+      color: var(--color-text);
+      font-size: 0.95rem;
+    }
+
+    .newsletter-btn {
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 14px 26px;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .newsletter-btn:hover {
+      background: var(--color-rouge-hover);
+      transform: translateY(-2px);
+    }
+
+    .newsletter-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(251, 246, 236, 0.7);
+    }
+
+    /* Coupon révélé */
+    .newsletter-success-box {
+      display: none;
+      background: rgba(201, 165, 92, 0.15);
+      border: 1px dashed var(--color-or);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-top: 15px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .coupon-display {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #FFFFFF;
+      color: var(--color-bordeaux);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.1em;
+      margin: 10px 0;
+      border: 1px solid var(--color-or);
+    }
+
+    .btn-copy-code {
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       12. PIED DE PAGE (FOOTER)
+       ========================================================================== */
+    .site-footer {
+      background: var(--color-bordeaux-dark);
+      color: #FFFFFF;
+      padding: 70px 0 30px;
+      border-top: 2px solid var(--color-or);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .footer-brand-p {
+      color: rgba(251, 246, 236, 0.8);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-address {
+      font-size: 0.85rem;
+      color: var(--color-or-light);
+      line-height: 1.6;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      color: var(--color-or-light);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-link-btn {
+      color: rgba(251, 246, 236, 0.82);
+      font-size: 0.9rem;
+      text-align: left;
+      transition: var(--transition);
+    }
+
+    .footer-link-btn:hover {
+      color: var(--color-or-light);
+      transform: translateX(4px);
+    }
+
+    .payment-icons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .payment-badge {
+      background: #FFFFFF;
+      color: #222;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 800;
+      border: 1px solid rgba(201, 165, 92, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201, 165, 92, 0.2);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: rgba(251, 246, 236, 0.65);
+    }
+
+    /* ==========================================================================
+       PANIER LATÉRAL (DRAWER)
+       ========================================================================== */
+    .cart-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 440px;
+      height: 100%;
+      background: #FFFFFF;
+      z-index: 1001;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .cart-drawer-overlay.active .cart-drawer {
+      transform: translateX(0);
+    }
+
+    .cart-drawer-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-creme);
+    }
+
+    .cart-drawer-title {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-close-drawer {
+      font-size: 1.4rem;
+      color: var(--color-sapin);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .btn-close-drawer:hover {
+      background: rgba(15, 61, 46, 0.1);
+      color: var(--color-rouge-noel);
+    }
+
+    /* Barre de progression livraison offerte */
+    .free-shipping-bar-wrap {
+      padding: 14px 24px;
+      background: #FFF8EB;
+      border-bottom: 1px solid rgba(201, 165, 92, 0.3);
+    }
+
+    .shipping-msg {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-bordeaux);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .shipping-progress-track {
+      height: 8px;
+      background: #E8DDC8;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .shipping-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-or), #27AE60);
+      border-radius: var(--radius-full);
+      transition: width 0.4s ease;
+    }
+
+    .cart-items-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cart-empty-view {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--color-text-muted);
+    }
+
+    .cart-empty-icon {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    .cart-item-card {
+      display: flex;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      align-items: center;
+    }
+
+    .cart-item-thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      border: 1px solid var(--color-border);
+      flex-shrink: 0;
+      background: #F4ECE0;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .cart-item-price {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--color-rouge-noel);
+      margin-bottom: 8px;
+    }
+
+    .cart-item-qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      border: 1px solid #DCD0BC;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      background: #FFFFFF;
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--color-sapin);
+      transition: background 0.2s;
+    }
+
+    .qty-btn:hover {
+      background: #F4ECE0;
+    }
+
+    .qty-num {
+      padding: 0 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .btn-remove-item {
+      color: #A3968A;
+      font-size: 0.8rem;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .btn-remove-item:hover {
+      color: var(--color-rouge-noel);
+    }
+
+    /* Option emballage & vente additionnelle */
+    .cart-drawer-extras {
+      padding: 16px 24px;
+      background: #FAF7F2;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .gift-wrap-option {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+    }
+
+    .gift-wrap-checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      cursor: pointer;
+    }
+
+    .gift-card-textarea-box {
+      margin-top: 10px;
+      display: none;
+    }
+
+    .gift-card-textarea-box.active {
+      display: block;
+    }
+
+    .gift-card-textarea {
+      width: 100%;
+      border: 1px solid var(--color-or-light);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      font-size: 0.82rem;
+      resize: vertical;
+      min-height: 55px;
+    }
+
+    /* Vente additionnelle upsell */
+    .upsell-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(201, 165, 92, 0.35);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .upsell-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #F4ECE0;
+      flex-shrink: 0;
+    }
+
+    .upsell-info {
+      flex: 1;
+    }
+
+    .upsell-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      line-height: 1.2;
+    }
+
+    .upsell-price {
+      font-size: 0.78rem;
+      color: var(--color-rouge-noel);
+      font-weight: 800;
+    }
+
+    .btn-add-upsell {
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .btn-add-upsell:hover {
+      background: var(--color-rouge-noel);
+    }
+
+    /* Code Promo & Footer Panier */
+    .cart-drawer-footer {
+      padding: 20px 24px;
+      border-top: 1px solid var(--color-border);
+      background: #FFFFFF;
+    }
+
+    .promo-input-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .promo-input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #DCD0BC;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .btn-apply-promo {
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .btn-apply-promo:hover {
+      background: var(--color-sapin-dark);
+    }
+
+    .promo-applied-badge {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      background: #E8F8F0;
+      border: 1px solid #2ECC71;
+      color: #1B8A4D;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .cart-summary-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: 6px;
+    }
+
+    .cart-summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-sapin);
+      padding-top: 10px;
+      border-top: 1px solid #EFE8DA;
+      margin-bottom: 16px;
+    }
+
+    .btn-checkout-cta {
+      width: 100%;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      padding: 15px;
+      border-radius: var(--radius-full);
+      font-size: 1.05rem;
+      box-shadow: 0 8px 24px rgba(214, 40, 57, 0.4);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-checkout-cta:hover {
+      background: var(--color-rouge-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(214, 40, 57, 0.55);
+    }
+
+    /* ==========================================================================
+       MODAL DE COMMANDE (CHECKOUT SIMULÉ)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 620px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--color-or);
+      position: relative;
+      animation: modalSlideUp 0.3s ease;
+    }
+
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      padding: 22px 28px;
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--color-or);
+    }
+
+    .modal-title {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-close-modal {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .btn-close-modal:hover {
+      transform: scale(1.15);
+      color: var(--color-or-light);
+    }
+
+    .modal-body {
+      padding: 26px 28px;
+    }
+
+    .checkout-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .form-group.col-full {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      margin-bottom: 5px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #DCD0BC;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: var(--color-or);
+      outline: none;
+    }
+
+    .form-input.error {
+      border-color: var(--color-rouge-noel);
+      background-color: #FFF5F5;
+    }
+
+    .form-error-msg {
+      font-size: 0.75rem;
+      color: var(--color-rouge-noel);
+      margin-top: 3px;
+      display: none;
+    }
+
+    .form-error-msg.active {
+      display: block;
+    }
+
+    /* Sélecteur de paiement */
+    .payment-selection-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-sapin);
+      margin-bottom: 10px;
+    }
+
+    .payment-radio-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .payment-radio-card {
+      border: 1px solid #DCD0BC;
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .payment-radio-card:hover {
+      border-color: var(--color-or);
+    }
+
+    .payment-radio-card.active {
+      border-color: var(--color-bordeaux);
+      background: #FBF2F4;
+      color: var(--color-bordeaux);
+      box-shadow: 0 2px 8px rgba(122, 15, 31, 0.15);
+    }
+
+    .demo-mode-notice {
+      background: #FFF9EB;
+      border: 1px solid var(--color-or);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      color: #7D5F19;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .cgv-checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-bottom: 22px;
+    }
+
+    .cgv-checkbox-row a {
+      color: var(--color-bordeaux);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .btn-submit-order {
+      width: 100%;
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      padding: 15px;
+      border-radius: var(--radius-full);
+      font-size: 1.05rem;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit-order:hover {
+      background: var(--color-rouge-hover);
+    }
+
+    /* Écran Confirmation */
+    .confirmation-view {
+      display: none;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .confirm-icon-big {
+      font-size: 4rem;
+      color: #2ECC71;
+      margin-bottom: 12px;
+      animation: bounceIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .confirm-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--color-sapin);
+      margin-bottom: 8px;
+    }
+
+    .confirm-order-ref {
+      display: inline-block;
+      background: var(--color-creme);
+      border: 1px dashed var(--color-or);
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--color-bordeaux);
+      margin-bottom: 16px;
+    }
+
+    .delivery-eta-card {
+      background: #EAF8F0;
+      border: 1px solid #2ECC71;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      color: #196F3D;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    /* ==========================================================================
+       MODAL LÉGALE (MENTIONS, CGV, RGPD)
+       ========================================================================== */
+    .legal-modal-content {
+      padding: 24px;
+      max-height: 75vh;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    .legal-modal-content h3 {
+      font-family: var(--font-title);
+      color: var(--color-sapin);
+      margin: 18px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    /* ==========================================================================
+       SOCIAL PROOF TOAST
+       ========================================================================== */
+    .social-toast-container {
+      position: fixed;
+      bottom: 90px;
+      left: 24px;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .social-toast {
+      pointer-events: auto;
+      background: #FFFFFF;
+      border: 1px solid var(--color-or);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      box-shadow: 0 10px 30px rgba(15, 61, 46, 0.18);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 360px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .social-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast-icon {
+      font-size: 1.5rem;
+      color: var(--color-rouge-noel);
+      flex-shrink: 0;
+    }
+
+    .toast-body {
+      font-size: 0.82rem;
+      line-height: 1.35;
+      color: var(--color-text);
+    }
+
+    .toast-body strong {
+      color: var(--color-sapin);
+    }
+
+    .toast-time {
+      font-size: 0.72rem;
+      color: #9C9289;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .btn-toast-close {
+      color: #AAA;
+      font-size: 1rem;
+      margin-left: auto;
+      padding: 2px;
+    }
+
+    /* ==========================================================================
+       STICKY BOTTOM BAR (DÉCLENCHÉE APRÈS 450PX)
+       ========================================================================== */
+    .sticky-bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(122, 15, 31, 0.98);
+      color: #FFFFFF;
+      border-top: 2px solid var(--color-or);
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
+      z-index: 990;
+      padding: 10px 0;
+      transform: translateY(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-bottom-bar.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sticky-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .sticky-promo-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .sticky-promo-text strong {
+      color: var(--color-or-light);
+    }
+
+    .sticky-timer-pill {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(201, 165, 92, 0.5);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      color: #FFDE94;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-sticky-cta {
+      background: var(--color-rouge-noel);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 8px 22px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 14px rgba(214, 40, 57, 0.4);
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-sticky-cta:hover {
+      background: #FFFFFF;
+      color: var(--color-bordeaux);
+    }
+
+    /* ==========================================================================
+       BANDEAU COOKIES CONFORME RGPD
+       ========================================================================== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      max-width: 400px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-or);
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+      padding: 18px 20px;
+      z-index: 1050;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .cookie-text {
+      font-size: 0.82rem;
+      color: var(--color-text);
+      line-height: 1.45;
+    }
+
+    .cookie-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-cookie-accept {
+      flex: 1;
+      background: var(--color-sapin);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-cookie-refuse {
+      background: #EFE8DA;
+      color: var(--color-text);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (MOBILE FIRST EXTENSIONS)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-title {
+        font-size: 2.7rem;
+      }
+      .hero-img-wrap img {
+        height: 380px;
+      }
+      .flash-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .urgency-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-nav {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .hero-section {
+        padding: 50px 0 70px;
+      }
+      .guide-filters-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .flash-grid {
+        grid-template-columns: 1fr;
+      }
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .sticky-promo-text {
+        font-size: 0.8rem;
+      }
+      .sticky-timer-pill {
+        display: none;
+      }
+      .social-toast-container {
+        left: 12px;
+        right: 12px;
+        max-width: none;
+        bottom: 80px;
+      }
+      .social-toast {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+      .countdown-digits {
+        gap: 6px;
+      }
+      .digit-val {
+        font-size: 1.4rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* Support prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .snowflakes-canvas {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       GUIRLANDE LUMINEUSE DORÉE ET ROUGE EN CSS PUR
+       ========================================================================== -->
+  <div class="fairy-lights-garland" aria-hidden="true">
+    <div class="fairy-wire"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+  </div>
+
+  <!-- ==========================================================================
+       1. BANDEAU DÉFILANT
+       ========================================================================== -->
+  <aside class="announcement-bar" aria-label="Annonces festives">
+    <div class="announcement-track">
+      <div class="announcement-item">🎄 NOËL 2026 · <span class="highlight">JUSQU'À -40 %</span> <span class="sep">✦</span></div>
+      <div class="announcement-item">✨ LIVRAISON OFFERTE DÈS 60 € <span class="sep">✦</span></div>
+      <div class="announcement-item">🎁 EMBALLAGE CADEAU OFFERT <span class="sep">✦</span></div>
+      <div class="announcement-item">🚚 COLISSIMO : LIVRÉ AVANT LE 24 DÉCEMBRE <span class="highlight">(Commandez avant le 18 déc.)</span> <span class="sep">✦</span></div>
+      <!-- Répétition fluide pour défilement infini -->
+      <div class="announcement-item">🎄 NOËL 2026 · <span class="highlight">JUSQU'À -40 %</span> <span class="sep">✦</span></div>
+      <div class="announcement-item">✨ LIVRAISON OFFERTE DÈS 60 € <span class="sep">✦</span></div>
+      <div class="announcement-item">🎁 EMBALLAGE CADEAU OFFERT <span class="sep">✦</span></div>
+      <div class="announcement-item">🚚 COLISSIMO : LIVRÉ AVANT LE 24 DÉCEMBRE <span class="highlight">(Commandez avant le 18 déc.)</span> <span class="sep">✦</span></div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. EN-TÊTE STICKY
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo" aria-label="Noëlia Boutique de Noël Accueil">
+        <div>
+          <span class="logo-text">Noëlia</span>
+          <span class="logo-sub">Paris · Maison de Noël</span>
+        </div>
+        <span class="logo-sparkle" aria-hidden="true">✦</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="#guide" class="nav-link">Guide Cadeaux</a>
+        <a href="#offres-flash" class="nav-link">Offres Flash</a>
+        <a href="#categories" class="nav-link">Catégories</a>
+        <a href="#catalogue" class="nav-link">Collection</a>
+        <a href="#avis" class="nav-link">Avis</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="openCartBtn" aria-label="Ouvrir le panier">
+          <span aria-hidden="true">🎁</span>
+          <span>Panier</span>
+          <span class="cart-count-badge" id="headerCartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         3. HERO SECTION (ATTIRER)
+         ========================================================================== -->
+    <section class="hero-section">
+      <!-- Flocons discrets dans le hero -->
+      <div class="snowflakes-canvas" id="heroSnowContainer" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span aria-hidden="true">✦</span> Édition Hiver 2026 · Paris
+          </div>
+          <h1 class="hero-title">
+            Faites de Noël un souvenir <em>qu'on n'oublie pas.</em>
+          </h1>
+          <p class="hero-subtitle">
+            Quand la maison s'emplit de rires, que le sapin scintille et que chaque paquet déposé avec amour promet un éclat dans les yeux. Découvrez notre sélection d'artisanat féerique et de délices partagés.
+          </p>
+          <div class="hero-actions">
+            <a href="#guide" class="btn btn-primary">
+              <span>🎁</span> Trouver mon cadeau
+            </a>
+            <a href="#offres-flash" class="btn btn-secondary">
+              <span>✦</span> Voir les offres de fête
+            </a>
+          </div>
+
+          <!-- Compte à rebours Noël 2026 -->
+          <div class="hero-countdown-block">
+            <div class="countdown-header">
+              <span class="countdown-label">
+                <span class="live-dot" aria-hidden="true"></span> Compte à rebours du Réveillon
+              </span>
+              <span style="font-size: 0.8rem; color: var(--color-or-light); font-weight: 600;">25 Décembre 2026</span>
+            </div>
+            <div class="countdown-digits" id="heroCountdown">
+              <div class="digit-box">
+                <div class="digit-val" id="xmasDays">00</div>
+                <div class="digit-unit">Jours</div>
+              </div>
+              <div class="digit-box">
+                <div class="digit-val" id="xmasHours">00</div>
+                <div class="digit-unit">Heures</div>
+              </div>
+              <div class="digit-box">
+                <div class="digit-val" id="xmasMinutes">00</div>
+                <div class="digit-unit">Minutes</div>
+              </div>
+              <div class="digit-box">
+                <div class="digit-val" id="xmasSeconds">00</div>
+                <div class="digit-unit">Secondes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="floating-discount-badge" aria-label="Remise jusqu'à -40%">
+            <span class="txt">Jusqu'à</span>
+            <span class="pct">-40%</span>
+            <span class="txt">Noël 2026</span>
+          </div>
+
+          <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Sapin majestueux orné de lumières chaleureuses et paquets cadeaux féeriques Noëlia" 
+                 onerror="handleImgError(this)" 
+                 width="600" height="480">
+          </div>
+
+          <div class="hero-proof-chip">
+            <span aria-hidden="true">✨</span>
+            <span>+ de 1 240 cadeaux déjà préparés avec amour</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. GUIDE CADEAUX INTERACTIF (RETENIR)
+         ========================================================================== */
+         ========================================================================== -->
+    <section class="gift-guide-section" id="guide">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">✦ Trouver l'attention parfaite ✦</span>
+          <h2 class="title-festive section-title">Le Guide Cadeaux <em>Féerique</em></h2>
+          <p class="section-desc">
+            Sélectionnez le destinataire et votre budget pour révéler instantanément les attentions qui feront battre son cœur au réveillon.
+          </p>
+        </div>
+
+        <div class="guide-box">
+          <div class="guide-filters-grid">
+            <!-- Filtre Pour qui -->
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <span aria-hidden="true">🎁</span> Pour qui cherchez-vous ?
+              </div>
+              <div class="filter-chips" id="targetFilters">
+                <button class="filter-chip active" data-target="all">Tous</button>
+                <button class="filter-chip" data-target="maman">Maman</button>
+                <button class="filter-chip" data-target="papa">Papa</button>
+                <button class="filter-chip" data-target="enfants">Enfants</button>
+                <button class="filter-chip" data-target="couple">Couple</button>
+                <button class="filter-chip" data-target="amis">Amis</button>
+              </div>
+            </div>
+
+            <!-- Filtre Budget -->
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <span aria-hidden="true">✨</span> Quel est votre budget ?
+              </div>
+              <div class="filter-chips" id="budgetFilters">
+                <button class="filter-chip active" data-budget="all">Tous les prix</button>
+                <button class="filter-chip" data-budget="under25">Moins de 25 €</button>
+                <button class="filter-chip" data-budget="25to50">25 à 50 €</button>
+                <button class="filter-chip" data-budget="over50">Plus de 50 €</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-status-bar">
+            <div class="guide-results-count" id="guideCountMsg">
+              <span>✨</span> <span class="badge-num" id="filteredCountBadge">12</span> idées cadeaux trouvées pour vous
+            </div>
+            <button class="btn-reset-filters" id="resetFiltersBtn">Réinitialiser les filtres</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. OFFRES FLASH NOËL (URGENCE & VALEUR)
+         ========================================================================== -->
+    <section class="flash-offers-section" id="offres-flash">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">✦ Stocks très limités ✦</span>
+          <h2 class="title-festive section-title">Ventes Flash de <em>Noël</em></h2>
+          <p class="section-desc">
+            Des coffrets prestigieux et créations exclusives jusqu'à -40%, réservés aux premiers préparatifs.
+          </p>
+        </div>
+
+        <div class="flash-grid" id="flashOffersGrid">
+          <!-- 3 Offres Flash générées dynamiquement -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. CATÉGORIES (EXPLORER)
+         ========================================================================== -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">✦ Univers enchantés ✦</span>
+          <h2 class="title-festive section-title">Explorez la Maison <em>Noëlia</em></h2>
+          <p class="section-desc">
+            Quatre univers raffinés façonnés pour sublimer chaque instant des fêtes de fin d'année.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card" data-category="decoration" role="button" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" 
+                 alt="Décorations festives et sapin" 
+                 loading="lazy" 
+                 onerror="handleImgError(this)">
+            <div class="category-overlay"></div>
+            <div class="category-content">
+              <h3 class="category-name">Décoration & Sapin</h3>
+              <span class="category-count">3 créations lumineuses</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-category="gourmandises" role="button" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" 
+                 alt="Gourmandises et table de fête" 
+                 loading="lazy" 
+                 onerror="handleImgError(this)">
+            <div class="category-overlay"></div>
+            <div class="category-content">
+              <h3 class="category-name">Gourmandises & Table</h3>
+              <span class="category-count">3 délices artisanaux</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-category="maison" role="button" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80" 
+                 alt="Cadeaux douillets pour la maison" 
+                 loading="lazy" 
+                 onerror="handleImgError(this)">
+            <div class="category-overlay"></div>
+            <div class="category-content">
+              <h3 class="category-name">Cadeaux Maison</h3>
+              <span class="category-count">3 trésors chaleureux</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-category="enfants" role="button" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=600&q=80" 
+                 alt="Univers enchanté pour les enfants" 
+                 loading="lazy" 
+                 onerror="handleImgError(this)">
+            <div class="category-overlay"></div>
+            <div class="category-content">
+              <h3 class="category-name">Univers Enfants</h3>
+              <span class="category-count">3 merveilles magiques</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. GRILLE DE 12 PRODUITS (CATALOGUE COMPLET)
+         ========================================================================== -->
+    <section class="products-section" id="catalogue">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">✦ Collection Noël 2026 ✦</span>
+          <h2 class="title-festive section-title">Nos 12 Merveilles à <em>Offrir</em></h2>
+          <p class="section-desc">
+            Chaque pièce a été sélectionnée pour sa beauté authentique, son émotion et sa capacité à émerveiller.
+          </p>
+        </div>
+
+        <div class="products-grid" id="mainProductsGrid">
+          <!-- 12 produits injectés par le script JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. BLOC « DERNIER JOUR POUR COMMANDER » (URGENCE 18 DÉCEMBRE)
+         ========================================================================== -->
+    <section class="urgency-deadline-section" id="livraison-garantie">
+      <div class="container urgency-grid">
+        <div class="urgency-left">
+          <div class="urgency-tag">
+            <span>⏱️</span> Date Limite de Sécurité
+          </div>
+          <h2 class="urgency-title">
+            Noël n'attend pas.<br>Commandez avant le 18 décembre pour être livré avant le 24.
+          </h2>
+          <p class="urgency-desc">
+            Nos préparateurs parisiens confectionnent chaque colis avec amour et minutie. En validant vos cadeaux avant le compte à rebours, vous avez l'assurance absolue de les contempler sous le sapin le soir du réveillon.
+          </p>
+          <div class="urgency-guarantee-pill">
+            <span>🚚</span> Colissimo Suivi garanti · Expédié sous 24h avec remise en main propre
+          </div>
+        </div>
+
+        <div class="urgency-timer-card">
+          <h3 class="timer-card-title">✦ Clôture des commandes garanties ✦</h3>
+          <div class="timer-digits-row" id="deadlineCountdown">
+            <div class="timer-digit-box">
+              <div class="num" id="dlDays">00</div>
+              <div class="lbl">Jours</div>
+            </div>
+            <div class="timer-digit-box">
+              <div class="num" id="dlHours">00</div>
+              <div class="lbl">Heures</div>
+            </div>
+            <div class="timer-digit-box">
+              <div class="num" id="dlMinutes">00</div>
+              <div class="lbl">Minutes</div>
+            </div>
+            <div class="timer-digit-box">
+              <div class="num" id="dlSeconds">00</div>
+              <div class="lbl">Secondes</div>
+            </div>
+          </div>
+          <a href="#catalogue" class="btn btn-secure-order">
+            <span>🎁</span> Sécuriser mes cadeaux maintenant
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. SECTION CONFIANCE & GARANTIES (CONVAINCRE)
+         ========================================================================== -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon-box" aria-hidden="true">🚚</div>
+            <h3 class="trust-title">Colissimo Suivi 48-72h</h3>
+            <p class="trust-text">Expédié avec le plus grand soin depuis notre atelier parisien. Suivi SMS en direct.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box" aria-hidden="true">🎁</div>
+            <h3 class="trust-title">Retours sous 30 jours</h3>
+            <p class="trust-text">Cadeaux échangeables jusqu'au 15 janvier 2027. Offrez l'esprit totalement serein.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box" aria-hidden="true">🔒</div>
+            <h3 class="trust-title">Paiement 100% Sécurisé</h3>
+            <p class="trust-text">Chiffrement bancaire SSL certifié 256 bits. Carte, PayPal ou Apple Pay en 1 clic.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box" aria-hidden="true">🇫🇷</div>
+            <h3 class="trust-title">Service Client en France</h3>
+            <p class="trust-text">Une équipe chaleureuse et attentionnée à votre écoute 7j/7 basée à Paris.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. AVIS CLIENTS (PREUVE SOCIALE AUTHENTIQUE)
+         ========================================================================== -->
+    <section class="reviews-section" id="avis">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">✦ Souvenirs partagés ✦</span>
+          <h2 class="title-festive section-title">Avis Clients <em>Noëlia</em></h2>
+          <p class="section-desc">
+            Leurs mots doux témoignent de la magie vécue autour du sapin.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-quote-mark">“</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              « J'ai commandé le coffret gourmand et la boîte à musique pour mes petits-enfants. Reçus en 48h dans un emballage absolument féerique avec un ruban de velours. Leurs yeux ébahis le 24 au soir resteront gravés pour toujours ! »
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">S</div>
+              <div class="author-info">
+                <div class="name">Sophie D.</div>
+                <div class="city">Nantes · Commande reçue le 20 déc.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-quote-mark">“</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              « Une vraie bouffée d'artisanat et d'élégance. La théière en fonte et le plaid en laine mérinos ont fait une sensation extraordinaire sous le sapin. Livraison impeccable bien avant la date limite. Bravo à Noëlia ! »
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">J</div>
+              <div class="author-info">
+                <div class="name">Julien M.</div>
+                <div class="city">Lyon · Cadeaux pour ses parents</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-quote-mark">“</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              « Un service client d'une gentillesse rare quand j'ai demandé à glisser un mot manuscrit sur la carte cadeau. Produits d'une qualité rare et parfum d'ambiance enivrant dès l'ouverture du carton. Je recommanderai sans hésiter ! »
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">C</div>
+              <div class="author-info">
+                <div class="name">Claire L.</div>
+                <div class="city">Bordeaux · Décorations & sapin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. NEWSLETTER (CAPTURE & CODE NOEL10)
+         ========================================================================== -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="newsletter-badge">🎁 Privilège de Noël</span>
+          <h2 class="newsletter-title">Rejoignez le Cercle Privé Noëlia</h2>
+          <p class="newsletter-desc">
+            Recevez nos inspirations de fête, nos conseils de table et bénéficiez immédiatement de <strong>-10 %</strong> sur votre première commande.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" 
+                   class="newsletter-input" 
+                   id="newsletterEmail" 
+                   placeholder="Votre adresse e-mail féerique..." 
+                   required>
+            <button type="submit" class="newsletter-btn">
+              Recevoir mon cadeau (-10%)
+            </button>
+          </form>
+          <span class="newsletter-disclaimer">Pas de spam. Vous pouvez vous désinscrire à tout moment d'un simple clic.</span>
+
+          <div class="newsletter-success-box" id="newsletterSuccess">
+            <p style="font-weight: 700; color: #FFFFFF; font-size: 1.1rem; margin-bottom: 6px;">
+              Bienvenue dans la magie de Noël ! 🎄
+            </p>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.9);">
+              Voici votre code secret applicable immédiatement dans votre panier :
+            </p>
+            <div class="coupon-display">
+              <span id="couponCodeText">NOEL10</span>
+              <button type="button" class="btn-copy-code" id="btnCopyCoupon">Copier & Appliquer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       12. PIED DE PAGE (FOOTER)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-brand-title">Noëlia · Paris</h3>
+          <p class="footer-brand-p">
+            Maison française dédiée à l'art d'enchanter Noël. Objets choisis, créations d'artisans d'art, gourmandises du terroir et attentions inoubliables pour illuminer les tablées familiales.
+          </p>
+          <div class="footer-address">
+            📍 14, Rue du Faubourg Saint-Honoré, 75008 Paris<br>
+            ✉️ contact@noelia-noel.fr<br>
+            📞 01 42 68 55 00 (Du lundi au samedi 9h-19h)
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Inspirations</h4>
+          <ul class="footer-links">
+            <li><a href="#guide" class="footer-link-btn">Guide Cadeaux 2026</a></li>
+            <li><a href="#offres-flash" class="footer-link-btn">Ventes Flash & Coffrets</a></li>
+            <li><a href="#categories" class="footer-link-btn">Décoration & Sapin</a></li>
+            <li><a href="#categories" class="footer-link-btn">Gourmandises de Fête</a></li>
+            <li><a href="#avis" class="footer-link-btn">Témoignages Clients</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Informations Légales</h4>
+          <ul class="footer-links">
+            <li><button class="footer-link-btn" onclick="openLegalModal('mentions')">Mentions Légales</button></li>
+            <li><button class="footer-link-btn" onclick="openLegalModal('cgv')">Conditions Générales (CGV)</button></li>
+            <li><button class="footer-link-btn" onclick="openLegalModal('retractation')">Droit de Rétractation (14j)</button></li>
+            <li><button class="footer-link-btn" onclick="openLegalModal('confidentialite')">Politique de Confidentialité</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Paiements & Sécurité</h4>
+          <p style="font-size: 0.85rem; color: rgba(251,246,236,0.8); line-height: 1.5; margin-bottom: 12px;">
+            Vos transactions sont sécurisées par cryptage bancaire SSL haute sécurité.
+          </p>
+          <div class="payment-icons-row">
+            <span class="payment-badge">💳 Carte Bancaire</span>
+            <span class="payment-badge">Visa</span>
+            <span class="payment-badge">Mastercard</span>
+            <span class="payment-badge">🅿️ PayPal</span>
+            <span class="payment-badge">🍏 Apple Pay</span>
+          </div>
+          <div style="margin-top: 18px; font-size: 0.8rem; color: var(--color-or-light);">
+            🌲 Engagé pour des emballages 100% recyclables et réutilisables.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Noëlia Paris. Tous droits réservés. L'art de célébrer Noël avec élégance.
+        </div>
+        <div>
+          Conçu avec passion pour transformer chaque visiteur en hôte enchanté.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PANIER LATÉRAL (DRAWER)
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay" aria-hidden="true">
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+      <div class="cart-drawer-header">
+        <h2 class="cart-drawer-title" id="cartDrawerTitle">
+          <span>🎁</span> Votre Hotte de Noël
+        </h2>
+        <button class="btn-close-drawer" id="closeCartBtn" aria-label="Fermer le panier">✕</button>
+      </div>
+
+      <!-- Barre de progression livraison offerte dès 60 € -->
+      <div class="free-shipping-bar-wrap">
+        <div class="shipping-msg" id="shippingBarMsg">
+          <span>🚚</span> Plus que 60,00 € pour la livraison offerte !
+        </div>
+        <div class="shipping-progress-track">
+          <div class="shipping-progress-fill" id="shippingBarFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Liste des articles -->
+      <div class="cart-items-scroll" id="cartItemsContainer">
+        <!-- Rendu dynamique -->
+      </div>
+
+      <!-- Options Cadeau & Upsell -->
+      <div class="cart-drawer-extras">
+        <div class="gift-wrap-option">
+          <label class="gift-wrap-checkbox-label">
+            <input type="checkbox" id="giftWrapCheck">
+            <span>🎁 Emballage cadeau féerique offert</span>
+          </label>
+          <div class="gift-card-textarea-box" id="giftCardTextBox">
+            <textarea class="gift-card-textarea" 
+                      id="giftCardMessage" 
+                      placeholder="Votre mot doux pour la carte (ex : Joyeux Noël de la part de...)"></textarea>
+          </div>
+        </div>
+
+        <!-- Vente additionnelle upsell à 9 € -->
+        <div class="upsell-box" id="cartUpsellBox">
+          <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=150&q=80" 
+               alt="Truffes artisanales au chocolat" 
+               class="upsell-thumb" 
+               onerror="handleImgError(this)">
+          <div class="upsell-info">
+            <div class="upsell-title">Sachet de 6 Truffes fondantes d'antan</div>
+            <div class="upsell-price">+ 9,00 €</div>
+          </div>
+          <button class="btn-add-upsell" id="btnAddUpsell">Ajouter +9 €</button>
+        </div>
+      </div>
+
+      <!-- Résumé & validation -->
+      <div class="cart-drawer-footer">
+        <!-- Code Promo -->
+        <div class="promo-applied-badge" id="promoBadge">
+          <span>Code <strong>NOEL10</strong> appliqué (-10%)</span>
+          <button type="button" id="btnRemovePromo" style="color:#C0392B;font-size:0.8rem;text-decoration:underline;">Retirer</button>
+        </div>
+        <div class="promo-input-row" id="promoInputRow">
+          <input type="text" class="promo-input" id="promoCodeInput" placeholder="Code promo (ex: NOEL10)">
+          <button class="btn-apply-promo" id="btnApplyPromo">Appliquer</button>
+        </div>
+
+        <div class="cart-summary-line">
+          <span>Sous-total</span>
+          <span id="cartSubtotalText">0,00 €</span>
+        </div>
+        <div class="cart-summary-line" id="discountLine" style="display:none; color:#27AE60;">
+          <span>Remise (Code Promo)</span>
+          <span id="cartDiscountText">-0,00 €</span>
+        </div>
+        <div class="cart-summary-line">
+          <span>Livraison Colissimo (48-72h)</span>
+          <span id="cartShippingText">4,90 €</span>
+        </div>
+        <div class="cart-summary-total">
+          <span>Total TTC</span>
+          <span id="cartTotalText">4,90 €</span>
+        </div>
+
+        <button class="btn-checkout-cta" id="btnGoToCheckout">
+          <span>Commander mes cadeaux</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE COMMANDE (CHECKOUT SIMULATION)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkoutModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+      <div class="modal-header">
+        <h3 class="modal-title" id="checkoutModalTitle">
+          <span>🎄</span> Finaliser ma commande féerique
+        </h3>
+        <button class="btn-close-modal" id="btnCloseCheckoutModal" aria-label="Fermer la modal">✕</button>
+      </div>
+
+      <div class="modal-body" id="checkoutFormView">
+        <div class="demo-mode-notice">
+          <span>ℹ️</span> <strong>Mode démonstration</strong> : aucun paiement bancaire réel ne sera prélevé.
+        </div>
+
+        <form id="orderForm" novalidate>
+          <div class="checkout-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="orderFirstName">Prénom *</label>
+              <input type="text" id="orderFirstName" class="form-input" placeholder="Camille" required>
+              <div class="form-error-msg" id="errFirstName">Veuillez renseigner votre prénom.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="orderLastName">Nom *</label>
+              <input type="text" id="orderLastName" class="form-input" placeholder="Dubois" required>
+              <div class="form-error-msg" id="errLastName">Veuillez renseigner votre nom.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderEmail">Adresse e-mail *</label>
+              <input type="email" id="orderEmail" class="form-input" placeholder="camille@exemple.fr" required>
+              <div class="form-error-msg" id="errEmail">Adresse e-mail valide requise.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="orderPhone">Téléphone (suivi SMS) *</label>
+              <input type="tel" id="orderPhone" class="form-input" placeholder="06 12 34 56 78" required>
+              <div class="form-error-msg" id="errPhone">Numéro de téléphone requis.</div>
+            </div>
+
+            <div class="form-group col-full">
+              <label class="form-label" for="orderAddress">Adresse postale de livraison *</label>
+              <input type="text" id="orderAddress" class="form-input" placeholder="12, Rue des Merveilles" required>
+              <div class="form-error-msg" id="errAddress">Veuillez indiquer votre adresse.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderZip">Code Postal (France) *</label>
+              <input type="text" id="orderZip" class="form-input" placeholder="75008" maxlength="5" required>
+              <div class="form-error-msg" id="errZip">Code postal à 5 chiffres obligatoire.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="orderCity">Ville *</label>
+              <input type="text" id="orderCity" class="form-input" placeholder="Paris" required>
+              <div class="form-error-msg" id="errCity">Veuillez renseigner votre ville.</div>
+            </div>
+          </div>
+
+          <div class="payment-selection-title">Mode de règlement sécurisé</div>
+          <div class="payment-radio-group">
+            <div class="payment-radio-card active" data-method="card">
+              <span>💳</span> Carte Bancaire
+            </div>
+            <div class="payment-radio-card" data-method="paypal">
+              <span>🅿️</span> PayPal
+            </div>
+            <div class="payment-radio-card" data-method="applepay">
+              <span>🍏</span> Apple Pay
+            </div>
+          </div>
+
+          <div class="cgv-checkbox-row">
+            <input type="checkbox" id="orderCgvCheck" required>
+            <label for="orderCgvCheck">
+              J'ai pris connaissance et j'accepte sans réserve les <a href="#" onclick="openLegalModal('cgv'); return false;">Conditions Générales de Vente</a> et la <a href="#" onclick="openLegalModal('confidentialite'); return false;">politique de confidentialité</a>.
+            </label>
+          </div>
+          <div class="form-error-msg" id="errCgv" style="margin-top:-14px; margin-bottom:14px;">Vous devez accepter les CGV pour continuer.</div>
+
+          <button type="submit" class="btn-submit-order" id="btnSubmitOrder">
+            <span id="btnSubmitText">Payer & Valider ma commande (<span id="modalTotalBtn">0,00 €</span>)</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Écran Confirmation de Commande -->
+      <div class="modal-body confirmation-view" id="checkoutSuccessView">
+        <div class="confirm-icon-big">🎄✨</div>
+        <h3 class="confirm-title">Merci pour votre confiance !</h3>
+        <p style="color:var(--color-text-muted); margin-bottom: 14px;">
+          Votre commande a été préparée et réservée avec le plus grand amour par l'équipe Noëlia.
+        </p>
+        <div class="confirm-order-ref" id="confirmedOrderRef">NOEL-2026-XXXXX</div>
+
+        <div class="delivery-eta-card">
+          <span>🚚</span> <strong>Livraison Garantie avant Noël</strong><br>
+          Date estimée : entre le 21 et le 22 décembre 2026 via Colissimo Suivi.
+        </div>
+
+        <div id="confirmedOrderSummary" style="font-size: 0.9rem; text-align: left; background: var(--color-creme); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <!-- Détails de commande injectés -->
+        </div>
+
+        <button class="btn btn-primary" id="btnCloseSuccessModal" style="width: 100%;">
+          Continuer mes emplettes féeriques
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL LÉGALE (MENTIONS, CGV, RGPD, RÉTRACTATION)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="legalModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 720px;" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+      <div class="modal-header">
+        <h3 class="modal-title" id="legalModalTitle">Informations Légales</h3>
+        <button class="btn-close-modal" id="btnCloseLegalModal" aria-label="Fermer">✕</button>
+      </div>
+      <div class="legal-modal-content" id="legalModalBody">
+        <!-- Texte légal complet injecté -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SOCIAL PROOF TOAST DYNAMIQUE (PRÉNOUMS ET VILLES FRANÇAISES)
+       ========================================================================== -->
+  <div class="social-toast-container">
+    <div class="social-toast" id="socialToast">
+      <div class="toast-icon">🎁</div>
+      <div class="toast-body">
+        <span id="toastContent"><strong>Éléonore à Lyon</strong> vient de commander la <em>Boule de Noël Souffle d'Or</em></span>
+        <span class="toast-time" id="toastTime">Il y a 3 minutes</span>
+      </div>
+      <button class="btn-toast-close" id="btnCloseToast" aria-label="Fermer la notification">×</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY BOTTOM BAR (APPARTION APRÈS 450PX)
+       ========================================================================== -->
+  <div class="sticky-bottom-bar" id="stickyBottomBar">
+    <div class="container sticky-bar-inner">
+      <div class="sticky-bar-left">
+        <span style="font-size: 1.2rem;">✨</span>
+        <div class="sticky-promo-text">
+          Offres Spéciales Noël 2026 : <strong>jusqu'à -40%</strong> avant rupture
+        </div>
+        <div class="sticky-timer-pill" id="stickyCountdownPill">
+          00j 00h 00m 00s
+        </div>
+      </div>
+      <a href="#catalogue" class="btn-sticky-cta">
+        Profiter des offres ➔
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       BANDEAU COOKIES RGPD
+       ========================================================================== -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p class="cookie-text">
+      🍪 Pour rendre votre visite aussi chaleureuse qu'un chocolat chaud, Noëlia utilise des cookies indispensables au fonctionnement du panier et à la sauvegarde de vos préférences festives.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn-cookie-accept" id="btnAcceptCookies">Accepter les délices</button>
+      <button class="btn-cookie-refuse" id="btnRefuseCookies">Refuser</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT VANILLA COMPLET (ZÉRO DÉPENDANCE, ROBUSTE, SANS ERREUR)
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       DONNÉES PRODUITS : EXACTEMENT 12 PRODUITS + 3 OFFRES FLASH + 2 UPSELLS
+       Remise maximale exactement de 40% (pour correspondre au "jusqu'à -40%")
+       ========================================================================== */
+    const PRODUCTS = [
+      {
+        id: 1,
+        name: "Boule de Noël Souffle d'Or & Neige Éternelle",
+        category: "decoration",
+        target: ["maman", "couple", "amis"],
+        price: 19.90,
+        oldPrice: 29.90, // -33%
+        rating: 4.9,
+        reviewsCount: 78,
+        badge: "Best-seller",
+        emotional: "Façonnée à la main en verre soufflé, elle capte la douce lueur des bougies du réveillon.",
+        image: "https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 2,
+        name: "Coffret Gastronomique Douceurs d'Alsace & Miels Rares",
+        category: "gourmandises",
+        target: ["papa", "maman", "couple"],
+        price: 47.40,
+        oldPrice: 79.00, // EXACTEMENT -40% (remise max annoncée)
+        rating: 5.0,
+        reviewsCount: 114,
+        badge: "Jusqu'à -40%",
+        emotional: "Pain d'épices ancestral, confit de figues et miels dorés pour sublimer vos tablées familiales.",
+        image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 3,
+        name: "Carillon Féerique du Père Noël en Bois Noble",
+        category: "enfants",
+        target: ["enfants"],
+        price: 24.90,
+        oldPrice: 35.00, // -29%
+        rating: 4.8,
+        reviewsCount: 62,
+        badge: "Idée cadeau",
+        emotional: "Une mélodie d'antan qui fait briller les yeux des plus petits au pied du grand sapin.",
+        image: "https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 4,
+        name: "Plaid Douillet Laine Mérinos & Cachemire Brun d'Hiver",
+        category: "maison",
+        target: ["maman", "couple", "amis"],
+        price: 69.00,
+        oldPrice: 99.00, // -30%
+        rating: 5.0,
+        reviewsCount: 95,
+        badge: "Coup de cœur",
+        emotional: "Un cocon de tendresse et de réconfort pour les soirées au coin du feu de cheminée.",
+        image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 5,
+        name: "Couronne Impériale de Sapin Nordmann & Baies Givrée",
+        category: "decoration",
+        target: ["couple", "maman", "amis"],
+        price: 34.90,
+        oldPrice: 49.90, // -30%
+        rating: 4.9,
+        reviewsCount: 83,
+        badge: "Dernières pièces",
+        emotional: "Accueillez ceux que vous aimez avec le parfum authentique et pur de la forêt d'hiver.",
+        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 6,
+        name: "Coffret Sommelier & Dégustation Prestige Grands Crus",
+        category: "gourmandises",
+        target: ["papa", "couple", "amis"],
+        price: 59.00,
+        oldPrice: 89.00, // -34%
+        rating: 4.9,
+        reviewsCount: 51,
+        badge: "Idée cadeau",
+        emotional: "L'art de servir les grands millésimes lors des longs dîners chaleureux de décembre.",
+        image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 7,
+        name: "Boîte à Musique Manège Enchanteur Illuminé",
+        category: "enfants",
+        target: ["enfants"],
+        price: 39.90,
+        oldPrice: 57.00, // -30%
+        rating: 5.0,
+        reviewsCount: 128,
+        badge: "Best-seller",
+        emotional: "Chevaux de bois tournoyants et clochettes d'or pour bercer les rêves de la nuit magique.",
+        image: "https://images.unsplash.com/photo-1575881875475-31024b8b79fc?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 8,
+        name: "Bougie Végétale Feu de Bois & Écorces d'Orange Douce",
+        category: "maison",
+        target: ["maman", "amis", "couple"],
+        price: 22.00,
+        oldPrice: 32.00, // -31%
+        rating: 4.8,
+        reviewsCount: 142,
+        badge: "Idée cadeau",
+        emotional: "Une flamme dansante qui embaume la maisonnée des souvenirs des Noëls de notre enfance.",
+        image: "https://images.unsplash.com/photo-1608755728617-aefab37d2edd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 9,
+        name: "Peluche Ours Polaire Artisanal Flocon de Soie",
+        category: "enfants",
+        target: ["enfants"],
+        price: 28.00,
+        oldPrice: 40.00, // -30%
+        rating: 5.0,
+        reviewsCount: 67,
+        badge: "Dernières pièces",
+        emotional: "Le fidèle compagnon des nuits d'hiver, doux comme une première neige immaculée.",
+        image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 10,
+        name: "Théière en Fonte Émaillée & Sélection Thés Étoilés",
+        category: "gourmandises",
+        target: ["maman", "papa", "amis"],
+        price: 52.00,
+        oldPrice: 75.00, // -31%
+        rating: 4.9,
+        reviewsCount: 88,
+        badge: "Idée cadeau",
+        emotional: "Pour savourer le temps qui s'arrête autour d'une tasse fumante aux arômes de cannelle.",
+        image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 11,
+        name: "Guirlande Lumineuse Micro-LED Étoiles Boréales 10m",
+        category: "decoration",
+        target: ["couple", "amis", "maman"],
+        price: 18.00,
+        oldPrice: 26.00, // -31%
+        rating: 4.9,
+        reviewsCount: 174,
+        badge: "Best-seller",
+        emotional: "Mille petites lucioles dorées pour habiller votre intérieur d'une poussière d'étoiles féeriques.",
+        image: "https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 12,
+        name: "Coffret de Soin Rituel Spa d'Hiver aux Huiles Précieuses",
+        category: "maison",
+        target: ["maman", "couple", "amis"],
+        price: 42.00,
+        oldPrice: 60.00, // -30%
+        rating: 4.9,
+        reviewsCount: 93,
+        badge: "Coup de cœur",
+        emotional: "Un instant suspendu de bien-être absolu pour se ressourcer au cœur de la saison froide.",
+        image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    const FLASH_OFFERS = [
+      {
+        id: 101,
+        name: "Coffret Prestige Réveillon Gourmand (Foie Gras, Truffes & Champagne)",
+        price: 66.00,
+        oldPrice: 110.00, // EXACTEMENT -40%
+        discountBadge: "-40%",
+        stockPct: 78,
+        stockText: "78% déjà réservés · Plus que 7 coffrets",
+        desc: "Une composition d'orfèvre culinaire pour un réveillon aux saveurs inoubliables.",
+        image: "https://images.unsplash.com/photo-1545601445-4d6a0a0565f0?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 102,
+        name: "Sapin Nordmann Artificiel Majestueux 210cm & Guirlande Intégrée",
+        price: 129.00,
+        oldPrice: 199.00, // -35%
+        discountBadge: "-35%",
+        stockPct: 84,
+        stockText: "84% déjà réservés · Plus que 4 sapins",
+        desc: "L'allure royale des forêts scandinaves, réutilisable pour illuminer des décennies de fêtes.",
+        image: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 103,
+        name: "Calendrier de l'Avent d'Exception 24 Merveilles Artisanales",
+        price: 49.00,
+        oldPrice: 79.00, // -38%
+        discountBadge: "-38%",
+        stockPct: 91,
+        stockText: "91% déjà réservés · Plus que 3 exemplaires",
+        desc: "Chaque matin de décembre recèle une création exclusive pour faire patienter petits et grands.",
+        image: "https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    /* ==========================================================================
+       GESTION DU PANIER & ÉTAT DE L'APPLICATION
+       ========================================================================== */
+    let cart = [];
+    let promoCodeApplied = null; // 'NOEL10'
+    let giftWrapSelected = false;
+    let giftMessage = "";
+    let currentTargetFilter = "all";
+    let currentBudgetFilter = "all";
+    let currentCategoryFilter = "all";
+
+    // Chargement safe du localStorage
+    try {
+      const savedCart = localStorage.getItem("noelia_cart_2026");
+      if (savedCart) {
+        cart = JSON.parse(savedCart);
+      }
+      const savedPromo = localStorage.getItem("noelia_promo_2026");
+      if (savedPromo === "NOEL10") {
+        promoCodeApplied = "NOEL10";
+      }
+    } catch (e) {
+      console.warn("Storage non accessible :", e);
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem("noelia_cart_2026", JSON.stringify(cart));
+        if (promoCodeApplied) {
+          localStorage.setItem("noelia_promo_2026", promoCodeApplied);
+        } else {
+          localStorage.removeItem("noelia_promo_2026");
+        }
+      } catch (e) {
+        // Safe fail
+      }
+    }
+
+    /* Fallback image élégant */
+    function handleImgError(img) {
+      if (img.dataset.failed) return;
+      img.dataset.failed = "true";
+      const title = encodeURIComponent(img.alt || "Noëlia 2026");
+      img.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%237A0F1F"/><stop offset="50%" stop-color="%230F3D2E"/><stop offset="100%" stop-color="%237A0F1F"/></linearGradient></defs><rect width="600" height="450" fill="url(%23g)"/><circle cx="300" cy="200" r="70" fill="%23C9A55C" opacity="0.2"/><text x="300" y="200" font-size="54" text-anchor="middle" dominant-baseline="middle">🎁</text><text x="300" y="270" font-family="serif" font-size="20" fill="%23FBF6EC" font-weight="600" text-anchor="middle">${title}</text><text x="300" y="300" font-family="sans-serif" font-size="13" fill="%23C9A55C" letter-spacing="2" text-anchor="middle">NOËLIA · COLLECTION 2026</text></svg>`;
+    }
+
+    /* ==========================================================================
+       RENDU DU CATALOGUE ET DES FILTRES
+       ========================================================================== */
+    const mainProductsGrid = document.getElementById("mainProductsGrid");
+    const flashOffersGrid = document.getElementById("flashOffersGrid");
+    const filteredCountBadge = document.getElementById("filteredCountBadge");
+
+    function renderFlashOffers() {
+      if (!flashOffersGrid) return;
+      flashOffersGrid.innerHTML = FLASH_OFFERS.map(item => `
+        <article class="flash-card">
+          <span class="flash-badge-top">${item.discountBadge}</span>
+          <div class="flash-img-wrap">
+            <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="flash-body">
+            <div class="flash-countdown-mini">
+              <span>⏱️</span> Offre flash limitée
+            </div>
+            <h3 class="flash-title">${item.name}</h3>
+            <p class="flash-desc">${item.desc}</p>
+            <div class="stock-progress-wrap">
+              <div class="stock-info-row">
+                <span>${item.stockText}</span>
+                <span>${item.stockPct}%</span>
+              </div>
+              <div class="stock-progress-bar">
+                <div class="stock-progress-fill" style="width: ${item.stockPct}%"></div>
+              </div>
+            </div>
+            <div class="flash-pricing">
+              <span class="flash-price-now">${item.price.toFixed(2).replace('.', ',')} €</span>
+              <span class="flash-price-old">${item.oldPrice.toFixed(2).replace('.', ',')} €</span>
+            </div>
+            <button class="btn-flash-add" onclick="addToCart(${item.id}, true)">
+              🎁 Profiter de l'offre
+            </button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderProducts() {
+      if (!mainProductsGrid) return;
+
+      const filtered = PRODUCTS.filter(prod => {
+        // Filtre catégorie
+        if (currentCategoryFilter !== "all" && prod.category !== currentCategoryFilter) {
+          return false;
+        }
+        // Filtre pour qui
+        if (currentTargetFilter !== "all" && !prod.target.includes(currentTargetFilter)) {
+          return false;
+        }
+        // Filtre budget
+        if (currentBudgetFilter === "under25" && prod.price >= 25) return false;
+        if (currentBudgetFilter === "25to50" && (prod.price < 25 || prod.price > 50)) return false;
+        if (currentBudgetFilter === "over50" && prod.price <= 50) return false;
+
+        return true;
+      });
+
+      filteredCountBadge.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        mainProductsGrid.innerHTML = `
+          <div class="empty-filter-state">
+            <div style="font-size: 3rem; margin-bottom: 10px;">❄️</div>
+            <h3 class="title-festive" style="font-size: 1.5rem; margin-bottom: 8px;">Aucune création ne correspond à ces critères</h3>
+            <p style="color: var(--color-text-muted); margin-bottom: 18px;">
+              Modifiez vos filtres ou explorez l'ensemble de notre collection pour trouver la perle rare.
+            </p>
+            <button class="btn btn-primary" onclick="resetAllFilters()">Voir tous les cadeaux</button>
+          </div>
+        `;
+        return;
+      }
+
+      mainProductsGrid.innerHTML = filtered.map(prod => {
+        const discountPct = Math.round(((prod.oldPrice - prod.price) / prod.oldPrice) * 100);
+        let badgeClass = "product-badge-flag";
+        if (prod.badge === "Best-seller") badgeClass += " badge-bestseller";
+        if (prod.badge === "Dernières pièces") badgeClass += " badge-stock";
+
+        return `
+          <article class="product-card">
+            <div class="product-img-box">
+              <span class="${badgeClass}">${prod.badge}</span>
+              <span class="badge-discount-tag">-${discountPct}%</span>
+              <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="handleImgError(this)">
+            </div>
+            <div class="product-info">
+              <div class="product-rating">
+                <span>★</span><span>${prod.rating.toFixed(1)}</span>
+                <span class="review-count">(${prod.reviewsCount} avis)</span>
+              </div>
+              <h3 class="product-name">${prod.name}</h3>
+              <p class="product-emotional-line">« ${prod.emotional} »</p>
+              <div class="product-price-row">
+                <span class="price-discounted">${prod.price.toFixed(2).replace('.', ',')} €</span>
+                <span class="price-original">${prod.oldPrice.toFixed(2).replace('.', ',')} €</span>
+              </div>
+              <div class="product-buttons-stack">
+                <button class="btn-add-cart" onclick="addToCart(${prod.id})">
+                  <span>🛒</span> Ajouter au panier
+                </button>
+                <button class="btn-gift-quick" onclick="addGiftWithWrap(${prod.id})" title="Ajoute au panier et active l'emballage cadeau">
+                  <span>🎁</span> Offrir en cadeau
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    /* Écouteurs Filtres */
+    document.querySelectorAll("#targetFilters .filter-chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#targetFilters .filter-chip").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentTargetFilter = btn.dataset.target;
+        renderProducts();
+      });
+    });
+
+    document.querySelectorAll("#budgetFilters .filter-chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#budgetFilters .filter-chip").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentBudgetFilter = btn.dataset.budget;
+        renderProducts();
+      });
+    });
+
+    document.querySelectorAll(".category-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const cat = card.dataset.category;
+        currentCategoryFilter = (currentCategoryFilter === cat) ? "all" : cat;
+        renderProducts();
+        document.getElementById("catalogue").scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    document.getElementById("resetFiltersBtn").addEventListener("click", resetAllFilters);
+
+    function resetAllFilters() {
+      currentTargetFilter = "all";
+      currentBudgetFilter = "all";
+      currentCategoryFilter = "all";
+      document.querySelectorAll("#targetFilters .filter-chip").forEach(b => {
+        b.classList.toggle("active", b.dataset.target === "all");
+      });
+      document.querySelectorAll("#budgetFilters .filter-chip").forEach(b => {
+        b.classList.toggle("active", b.dataset.budget === "all");
+      });
+      renderProducts();
+    }
+
+    /* ==========================================================================
+       GESTION DU PANIER (AJOUT, RETRAIT, QUANTITÉS, VENTES ADDITIONNELLES)
+       ========================================================================== */
+    function findProductById(id) {
+      if (id === 991) {
+        return {
+          id: 991,
+          name: "Sachet de 6 Truffes fondantes d'antan",
+          price: 9.00,
+          image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=150&q=80"
+        };
+      }
+      const prod = PRODUCTS.find(p => p.id === id);
+      if (prod) return prod;
+      return FLASH_OFFERS.find(f => f.id === id);
+    }
+
+    function addToCart(productId, openNow = true) {
+      const product = findProductById(productId);
+      if (!product) return;
+
+      const existingIndex = cart.findIndex(item => item.id === productId);
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          qty: 1
+        });
+      }
+
+      saveCart();
+      updateCartUI();
+      if (openNow) openCart();
+    }
+
+    function addGiftWithWrap(productId) {
+      addToCart(productId, false);
+      giftWrapSelected = true;
+      const wrapCheck = document.getElementById("giftWrapCheck");
+      if (wrapCheck) wrapCheck.checked = true;
+      const cardTextBox = document.getElementById("giftCardTextBox");
+      if (cardTextBox) cardTextBox.classList.add("active");
+      saveCart();
+      updateCartUI();
+      openCart();
+    }
+
+    function updateItemQty(productId, delta) {
+      const idx = cart.findIndex(item => item.id === productId);
+      if (idx === -1) return;
+
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
+      saveCart();
+      updateCartUI();
+    }
+
+    function removeItemFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
+      saveCart();
+      updateCartUI();
+    }
+
+    // Ajout Upsell Truffes
+    document.getElementById("btnAddUpsell").addEventListener("click", () => {
+      addToCart(991, false);
+      updateCartUI();
+    });
+
+    /* Rendu Interface Panier */
+    function updateCartUI() {
+      const count = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById("headerCartCount").textContent = count;
+
+      const cartItemsContainer = document.getElementById("cartItemsContainer");
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="cart-empty-view">
+            <div class="cart-empty-icon">🎁</div>
+            <h3 class="title-festive" style="font-size:1.25rem; margin-bottom:6px;">Votre hotte est vide</h3>
+            <p style="font-size:0.85rem;">Parcourez notre collection pour garnir le pied du sapin de merveilleux souvenirs.</p>
+          </div>
+        `;
+      } else {
+        cartItemsContainer.innerHTML = cart.map(item => `
+          <div class="cart-item-card">
+            <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" onerror="handleImgError(this)">
+            <div class="cart-item-info">
+              <div class="cart-item-title">${item.name}</div>
+              <div class="cart-item-price">${(item.price * item.qty).toFixed(2).replace('.', ',')} €</div>
+              <div class="cart-item-qty-row">
+                <div class="qty-controls">
+                  <button class="qty-btn" onclick="updateItemQty(${item.id}, -1)" aria-label="Diminuer">-</button>
+                  <span class="qty-num">${item.qty}</span>
+                  <button class="qty-btn" onclick="updateItemQty(${item.id}, 1)" aria-label="Augmenter">+</button>
+                </div>
+                <button class="btn-remove-item" onclick="removeItemFromCart(${item.id})">Supprimer</button>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      // Calculs financiers
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let discountAmount = 0;
+      if (promoCodeApplied === "NOEL10") {
+        discountAmount = subtotal * 0.10;
+      }
+      const totalAfterDiscount = Math.max(0, subtotal - discountAmount);
+
+      // Règle de livraison : 4,90 € sous 60 €, OFFERTE dès 60 €
+      const shippingCost = (subtotal >= 60 || subtotal === 0) ? 0.00 : 4.90;
+      const finalTotal = totalAfterDiscount + (subtotal === 0 ? 0 : shippingCost);
+
+      // Barre de livraison offerte
+      const shippingBarMsg = document.getElementById("shippingBarMsg");
+      const shippingBarFill = document.getElementById("shippingBarFill");
+      const diffToFree = 60.00 - subtotal;
+
+      if (subtotal === 0) {
+        shippingBarMsg.innerHTML = `<span>🚚</span> Plus que 60,00 € pour la livraison offerte !`;
+        shippingBarFill.style.width = "0%";
+      } else if (diffToFree > 0) {
+        const pct = Math.min(100, Math.round((subtotal / 60) * 100));
+        shippingBarMsg.innerHTML = `<span>🚚</span> Plus que <strong>${diffToFree.toFixed(2).replace('.', ',')} €</strong> pour la livraison offerte !`;
+        shippingBarFill.style.width = `${pct}%`;
+      } else {
+        shippingBarMsg.innerHTML = `<span>✨</span> <strong>Félicitations !</strong> Votre livraison Colissimo est OFFERTE !`;
+        shippingBarFill.style.width = "100%";
+      }
+
+      // Textes récapitulatifs
+      document.getElementById("cartSubtotalText").textContent = `${subtotal.toFixed(2).replace('.', ',')} €`;
+      
+      const discountLine = document.getElementById("discountLine");
+      if (discountAmount > 0) {
+        discountLine.style.display = "flex";
+        document.getElementById("cartDiscountText").textContent = `-${discountAmount.toFixed(2).replace('.', ',')} €`;
+      } else {
+        discountLine.style.display = "none";
+      }
+
+      document.getElementById("cartShippingText").textContent = shippingCost === 0 
+        ? (subtotal === 0 ? "0,00 €" : "OFFERTE") 
+        : "4,90 €";
+
+      document.getElementById("cartTotalText").textContent = `${finalTotal.toFixed(2).replace('.', ',')} €`;
+      document.getElementById("modalTotalBtn").textContent = `${finalTotal.toFixed(2).replace('.', ',')} €`;
+
+      // État promo UI
+      const promoBadge = document.getElementById("promoBadge");
+      const promoInputRow = document.getElementById("promoInputRow");
+      if (promoCodeApplied === "NOEL10") {
+        promoBadge.style.display = "flex";
+        promoInputRow.style.display = "none";
+      } else {
+        promoBadge.style.display = "none";
+        promoInputRow.style.display = "flex";
+      }
+    }
+
+    // Gestion du Code Promo
+    document.getElementById("btnApplyPromo").addEventListener("click", () => {
+      const input = document.getElementById("promoCodeInput");
+      const val = input.value.trim().toUpperCase();
+      if (val === "NOEL10") {
+        promoCodeApplied = "NOEL10";
+        input.value = "";
+        saveCart();
+        updateCartUI();
+        alert("✨ Code NOEL10 appliqué : -10% de remise sur votre commande !");
+      } else {
+        alert("Le code saisi n'est pas valide. Utilisez NOEL10 pour -10%.");
+      }
+    });
+
+    document.getElementById("btnRemovePromo").addEventListener("click", () => {
+      promoCodeApplied = null;
+      saveCart();
+      updateCartUI();
+    });
+
+    // Emballage cadeau
+    const giftWrapCheck = document.getElementById("giftWrapCheck");
+    const giftCardTextBox = document.getElementById("giftCardTextBox");
+    const giftCardMessage = document.getElementById("giftCardMessage");
+
+    giftWrapCheck.addEventListener("change", (e) => {
+      giftWrapSelected = e.target.checked;
+      giftCardTextBox.classList.toggle("active", giftWrapSelected);
+    });
+
+    giftCardMessage.addEventListener("input", (e) => {
+      giftMessage = e.target.value;
+    });
+
+    // Ouvrir / Fermer Drawer
+    const cartOverlay = document.getElementById("cartOverlay");
+    function openCart() {
+      cartOverlay.classList.add("active");
+    }
+    function closeCart() {
+      cartOverlay.classList.remove("active");
+    }
+
+    document.getElementById("openCartBtn").addEventListener("click", openCart);
+    document.getElementById("closeCartBtn").addEventListener("click", closeCart);
+    cartOverlay.addEventListener("click", (e) => {
+      if (e.target === cartOverlay) closeCart();
+    });
+
+    /* ==========================================================================
+       MODAL DE COMMANDE (VALIDATION ET CHECKOUT DE DÉMONSTRATION)
+       ========================================================================== */
+    const checkoutModal = document.getElementById("checkoutModal");
+    const btnGoToCheckout = document.getElementById("btnGoToCheckout");
+    const btnCloseCheckoutModal = document.getElementById("btnCloseCheckoutModal");
+    const orderForm = document.getElementById("orderForm");
+    const checkoutFormView = document.getElementById("checkoutFormView");
+    const checkoutSuccessView = document.getElementById("checkoutSuccessView");
+
+    btnGoToCheckout.addEventListener("click", () => {
+      if (cart.length === 0) {
+        alert("Votre hotte est vide ! Ajoutez d'abord vos cadeaux.");
+        return;
+      }
+      closeCart();
+      checkoutFormView.style.display = "block";
+      checkoutSuccessView.style.display = "none";
+      checkoutModal.classList.add("active");
+    });
+
+    btnCloseCheckoutModal.addEventListener("click", () => {
+      checkoutModal.classList.remove("active");
+    });
+
+    document.getElementById("btnCloseSuccessModal").addEventListener("click", () => {
+      checkoutModal.classList.remove("active");
+    });
+
+    checkoutModal.addEventListener("click", (e) => {
+      if (e.target === checkoutModal) checkoutModal.classList.remove("active");
+    });
+
+    // Sélection mode de paiement
+    let selectedPaymentMethod = "card";
+    document.querySelectorAll(".payment-radio-card").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".payment-radio-card").forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+        selectedPaymentMethod = card.dataset.method;
+      });
+    });
+
+    // Soumission commande avec validation
+    orderForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let isValid = true;
+      const firstName = document.getElementById("orderFirstName");
+      const lastName = document.getElementById("orderLastName");
+      const email = document.getElementById("orderEmail");
+      const phone = document.getElementById("orderPhone");
+      const address = document.getElementById("orderAddress");
+      const zip = document.getElementById("orderZip");
+      const city = document.getElementById("orderCity");
+      const cgv = document.getElementById("orderCgvCheck");
+
+      // Reset errors
+      document.querySelectorAll(".form-error-msg").forEach(m => m.classList.remove("active"));
+      document.querySelectorAll(".form-input").forEach(i => i.classList.remove("error"));
+
+      if (!firstName.value.trim()) {
+        firstName.classList.add("error");
+        document.getElementById("errFirstName").classList.add("active");
+        isValid = false;
+      }
+      if (!lastName.value.trim()) {
+        lastName.classList.add("error");
+        document.getElementById("errLastName").classList.add("active");
+        isValid = false;
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        email.classList.add("error");
+        document.getElementById("errEmail").classList.add("active");
+        isValid = false;
+      }
+      if (!phone.value.trim()) {
+        phone.classList.add("error");
+        document.getElementById("errPhone").classList.add("active");
+        isValid = false;
+      }
+      if (!address.value.trim()) {
+        address.classList.add("error");
+        document.getElementById("errAddress").classList.add("active");
+        isValid = false;
+      }
+      const zipRegex = /^[0-9]{5}$/;
+      if (!zipRegex.test(zip.value.trim())) {
+        zip.classList.add("error");
+        document.getElementById("errZip").classList.add("active");
+        isValid = false;
+      }
+      if (!city.value.trim()) {
+        city.classList.add("error");
+        document.getElementById("errCity").classList.add("active");
+        isValid = false;
+      }
+      if (!cgv.checked) {
+        document.getElementById("errCgv").classList.add("active");
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      // Bouton en état chargement
+      const submitBtn = document.getElementById("btnSubmitOrder");
+      submitBtn.disabled = true;
+      document.getElementById("btnSubmitText").textContent = "Préparation de votre commande féerique...";
+
+      setTimeout(() => {
+        // Enregistrement dans localStorage
+        const orderId = "NOEL-2026-" + Math.random().toString(36).substring(2, 7).toUpperCase();
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        const discount = promoCodeApplied === "NOEL10" ? subtotal * 0.1 : 0;
+        const shipping = subtotal >= 60 ? 0 : 4.90;
+        const total = (subtotal - discount) + shipping;
+
+        const orderData = {
+          orderId,
+          date: new Date().toISOString(),
+          customer: {
+            name: `${firstName.value.trim()} ${lastName.value.trim()}`,
+            email: email.value.trim(),
+            address: `${address.value.trim()}, ${zip.value.trim()} ${city.value.trim()}`,
+            phone: phone.value.trim()
+          },
+          items: cart,
+          giftWrap: giftWrapSelected,
+          giftMessage: giftMessage,
+          paymentMethod: selectedPaymentMethod,
+          total: total.toFixed(2)
+        };
+
+        try {
+          const ordersHistory = JSON.parse(localStorage.getItem("noelia_orders_history") || "[]");
+          ordersHistory.unshift(orderData);
+          localStorage.setItem("noelia_orders_history", JSON.stringify(ordersHistory));
+        } catch (err) {
+          console.warn("Storage err:", err);
+        }
+
+        // Affichage confirmation
+        document.getElementById("confirmedOrderRef").textContent = `N° DE COMMANDE : ${orderId}`;
+        document.getElementById("confirmedOrderSummary").innerHTML = `
+          <strong>Destinataire :</strong> ${orderData.customer.name}<br>
+          <strong>Adresse :</strong> ${orderData.customer.address}<br>
+          <strong>Articles commandés :</strong> ${cart.map(i => `${i.qty}x ${i.name}`).join(', ')}<br>
+          <strong>Emballage cadeau :</strong> ${giftWrapSelected ? 'Oui (Ruban satin et carte offerte)' : 'Non'}<br>
+          ${giftMessage ? `<strong>Message carte :</strong> « ${giftMessage} »<br>` : ''}
+          <strong>Total réglé (Simulation) :</strong> ${total.toFixed(2).replace('.', ',')} €
+        `;
+
+        // Vider le panier
+        cart = [];
+        saveCart();
+        updateCartUI();
+
+        submitBtn.disabled = false;
+        document.getElementById("btnSubmitText").textContent = "Payer & Valider ma commande";
+        checkoutFormView.style.display = "none";
+        checkoutSuccessView.style.display = "block";
+      }, 1000);
+    });
+
+    /* ==========================================================================
+       LES DEUX COMPTES À REBOURS (RÉVEILLON 2026 ET DATE LIMITE 18 DÉC.)
+       ========================================================================== */
+    const xmasTarget = new Date("2026-12-25T00:00:00+01:00").getTime();
+    const deadlineTarget = new Date("2026-12-18T23:59:59+01:00").getTime();
+
+    function updateCountdowns() {
+      const now = new Date().getTime();
+
+      // 1. Compte à rebours Réveillon
+      const xmasDiff = xmasTarget - now;
+      if (xmasDiff > 0) {
+        const d = Math.floor(xmasDiff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((xmasDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((xmasDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((xmasDiff % (1000 * 60)) / 1000);
+
+        const pad = (n) => String(n).padStart(2, '0');
+        document.getElementById("xmasDays").textContent = pad(d);
+        document.getElementById("xmasHours").textContent = pad(h);
+        document.getElementById("xmasMinutes").textContent = pad(m);
+        document.getElementById("xmasSeconds").textContent = pad(s);
+
+        // Sticky pill
+        document.getElementById("stickyCountdownPill").textContent = `${pad(d)}j ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+      }
+
+      // 2. Compte à rebours Date Limite 18 décembre
+      const dlDiff = deadlineTarget - now;
+      if (dlDiff > 0) {
+        const d = Math.floor(dlDiff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((dlDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((dlDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((dlDiff % (1000 * 60)) / 1000);
+
+        const pad = (n) => String(n).padStart(2, '0');
+        document.getElementById("dlDays").textContent = pad(d);
+        document.getElementById("dlHours").textContent = pad(h);
+        document.getElementById("dlMinutes").textContent = pad(m);
+        document.getElementById("dlSeconds").textContent = pad(s);
+      }
+    }
+    setInterval(updateCountdowns, 1000);
+    updateCountdowns();
+
+    /* ==========================================================================
+       NEWSLETTER ET CODE NOEL10
+       ========================================================================== */
+    const newsletterForm = document.getElementById("newsletterForm");
+    const newsletterSuccess = document.getElementById("newsletterSuccess");
+
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("newsletterEmail").value.trim();
+      if (!email) return;
+
+      newsletterForm.style.display = "none";
+      newsletterSuccess.style.display = "block";
+    });
+
+    document.getElementById("btnCopyCoupon").addEventListener("click", () => {
+      promoCodeApplied = "NOEL10";
+      saveCart();
+      updateCartUI();
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText("NOEL10");
+      }
+      alert("🎁 Code NOEL10 copié et appliqué directement à votre panier !");
+      openCart();
+    });
+
+    /* ==========================================================================
+       PREUVE SOCIALE DYNAMIQUE (TOAST TOUTES LES 8 À 12 SECONDES)
+       ========================================================================== */
+    const SOCIAL_PURCHASES = [
+      { name: "Éléonore à Lyon", item: "la Boule de Noël Souffle d'Or", time: "Il y a 3 minutes" },
+      { name: "Alexandre à Bordeaux", item: "le Coffret Gastronomique d'Alsace", time: "Il y a 5 minutes" },
+      { name: "Camille à Nantes", item: "la Boîte à Musique Manège Enchanteur", time: "Il y a 7 minutes" },
+      { name: "Thomas à Lille", item: "le Plaid Douillet Laine Mérinos", time: "Il y a 10 minutes" },
+      { name: "Claire à Strasbourg", item: "la Couronne Impériale de Sapin", time: "Il y a 2 minutes" },
+      { name: "Marc à Marseille", item: "le Coffret Sommelier Grands Crus", time: "Il y a 6 minutes" },
+      { name: "Sophie à Toulouse", item: "la Bougie Végétale Feu de Bois", time: "Il y a 4 minutes" },
+      { name: "Antoine à Paris", item: "le Carillon Féerique du Père Noël", time: "Il y a 8 minutes" }
+    ];
+
+    let socialIndex = 0;
+    const socialToast = document.getElementById("socialToast");
+    const toastContent = document.getElementById("toastContent");
+    const toastTime = document.getElementById("toastTime");
+
+    function showNextSocialToast() {
+      const purchase = SOCIAL_PURCHASES[socialIndex % SOCIAL_PURCHASES.length];
+      toastContent.innerHTML = `<strong>${purchase.name}</strong> vient de commander <em>${purchase.item}</em>`;
+      toastTime.textContent = purchase.time;
+
+      socialToast.classList.add("show");
+
+      setTimeout(() => {
+        socialToast.classList.remove("show");
+      }, 4500);
+
+      socialIndex++;
+    }
+
+    // Intervalle aléatoire 8-12 secondes
+    function scheduleNextToast() {
+      const delay = Math.floor(Math.random() * (12000 - 8000 + 1)) + 8000;
+      setTimeout(() => {
+        showNextSocialToast();
+        scheduleNextToast();
+      }, delay);
+    }
+    setTimeout(scheduleNextToast, 4000);
+
+    document.getElementById("btnCloseToast").addEventListener("click", () => {
+      socialToast.classList.remove("show");
+    });
+
+    /* ==========================================================================
+       BARRE FIXE (STICKY BOTTOM BAR APPARITION APRÈS 450PX)
+       ========================================================================== */
+    const stickyBottomBar = document.getElementById("stickyBottomBar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 450) {
+        stickyBottomBar.classList.add("visible");
+      } else {
+        stickyBottomBar.classList.remove("visible");
+      }
+    }, { passive: true });
+
+    /* ==========================================================================
+       FLOCONS DE NEIGE DANS LE HERO (MAX 25 FLOCONS LÉGERS)
+       Désactivé si prefers-reduced-motion
+       ========================================================================== */
+    const heroSnowContainer = document.getElementById("heroSnowContainer");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (heroSnowContainer && !prefersReducedMotion) {
+      const flakeCount = 22;
+      const flakeChars = ['❄', '❅', '✦', '•', '·'];
+
+      for (let i = 0; i < flakeCount; i++) {
+        const flake = document.createElement("div");
+        flake.className = "snowflake";
+        flake.textContent = flakeChars[Math.floor(Math.random() * flakeChars.length)];
+        flake.style.left = `${Math.random() * 100}%`;
+        flake.style.fontSize = `${Math.random() * 1.1 + 0.6}rem`;
+        flake.style.animationDuration = `${Math.random() * 7 + 6}s`;
+        flake.style.animationDelay = `${Math.random() * 5}s`;
+        flake.style.opacity = `${Math.random() * 0.7 + 0.2}`;
+        heroSnowContainer.appendChild(flake);
+      }
+    }
+
+    /* ==========================================================================
+       BANDEAU COOKIES RGPD
+       ========================================================================== */
+    const cookieBanner = document.getElementById("cookieBanner");
+    try {
+      if (localStorage.getItem("noelia_cookie_accepted") === "true") {
+        cookieBanner.style.display = "none";
+      }
+    } catch (e) {}
+
+    document.getElementById("btnAcceptCookies").addEventListener("click", () => {
+      try { localStorage.setItem("noelia_cookie_accepted", "true"); } catch (e) {}
+      cookieBanner.style.display = "none";
+    });
+
+    document.getElementById("btnRefuseCookies").addEventListener("click", () => {
+      try { localStorage.setItem("noelia_cookie_accepted", "refused"); } catch (e) {}
+      cookieBanner.style.display = "none";
+    });
+
+    /* ==========================================================================
+       MODAL LÉGALE : MENTIONS, CGV, RGPD, RÉTRACTATION (AUCUN LIEN MORT)
+       ========================================================================== */
+    const legalModal = document.getElementById("legalModal");
+    const legalModalTitle = document.getElementById("legalModalTitle");
+    const legalModalBody = document.getElementById("legalModalBody");
+    const btnCloseLegalModal = document.getElementById("btnCloseLegalModal");
+
+    const LEGAL_TEXTS = {
+      mentions: {
+        title: "Mentions Légales",
+        content: `
+          <h3>1. Éditeur de la Boutique</h3>
+          <p>La boutique en ligne <strong>Noëlia</strong> est éditée par la société <strong>SAS NOËLIA PARIS</strong>, société par actions simplifiée au capital de 25 000 €, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro RCS Paris 912 345 678.</p>
+          <p><strong>Siège social :</strong> 14, Rue du Faubourg Saint-Honoré, 75008 Paris, France.<br>
+          <strong>Numéro de TVA intracommunautaire :</strong> FR 32 912 345 678.<br>
+          <strong>Contact e-mail :</strong> contact@noelia-noel.fr<br>
+          <strong>Téléphone :</strong> 01 42 68 55 00</p>
+          
+          <h3>2. Directeur de la publication</h3>
+          <p>Mme Claire de Beaumont, Présidente de SAS Noëlia Paris.</p>
+          
+          <h3>3. Hébergement</h3>
+          <p>Le site est hébergé sur l'infrastructure sécurisée de Netlify Inc., 44 Montgomery Street, Suite 300, San Francisco, California 94104, USA.</p>
+        `
+      },
+      cgv: {
+        title: "Conditions Générales de Vente (CGV)",
+        content: `
+          <h3>1. Champ d'application</h3>
+          <p>Les présentes Conditions Générales de Vente s'appliquent à toutes les commandes passées sur la boutique Noëlia pour la collection Noël 2026. Toute commande implique l'acceptation pleine et entière des présentes conditions.</p>
+          
+          <h3>2. Prix et Offres</h3>
+          <p>Les prix de nos produits sont indiqués en euros (€) toutes taxes comprises (TTC), tenant compte de la TVA applicable au jour de la commande. Les remises affichées (jusqu'à -40%) sont calculées sur les prix de référence de la saison.</p>
+          
+          <h3>3. Livraison et Délais de Noël</h3>
+          <p>Les livraisons sont assurées en France Métropolitaine via Colissimo suivi sous 48 à 72 heures ouvrées. Toute commande passée avant le 18 décembre 2026 à 23h59 fait l'objet de notre engagement de livraison garanti avant le 24 décembre au soir.</p>
+          <p>Les frais de port sont de 4,90 € et deviennent <strong>totalement offerts dès 60 € d'achats</strong>.</p>
+          
+          <h3>4. Garantie et Échanges de Noël</h3>
+          <p>Pour les fêtes de fin d'année, tout article commandé entre novembre et décembre 2026 peut être échangé ou retourné sans pénalité jusqu'au 15 janvier 2027.</p>
+        `
+      },
+      retractation: {
+        title: "Droit de Rétractation (14 jours)",
+        content: `
+          <h3>Exercice du droit de rétractation légal</h3>
+          <p>Conformément aux articles L. 221-18 et suivants du Code de la consommation, vous disposez d'un délai légal de quatorze (14) jours francs à compter de la réception de vos articles pour exercer votre droit de rétractation sans avoir à motiver votre décision.</p>
+          
+          <h3>Extension Spéciale Fêtes Noëlia</h3>
+          <p>Parce qu'un cadeau de Noël peut parfois devoir être échangé après le déballage du 24 décembre, Noëlia prolonge gracieusement ce délai jusqu'au <strong>15 janvier 2027</strong> pour l'ensemble des articles de la collection de Noël 2026 non ouverts et conservés dans leur emballage d'origine.</p>
+          
+          <h3>Modalités de retour</h3>
+          <p>Pour effectuer un retour, envoyez simplement un e-mail à <strong>retours@noelia-noel.fr</strong>. Notre équipe vous adressera un bon de retour Colissimo prépayé sous 24h.</p>
+        `
+      },
+      confidentialite: {
+        title: "Politique de Confidentialité & RGPD",
+        content: `
+          <h3>Protection de vos données personnelles</h3>
+          <p>Noëlia accorde une importance primordiale à la confidentialité de vos informations. Les données collectées lors de votre commande (nom, adresse, téléphone, e-mail) sont strictement réservées au traitement, à l'expédition Colissimo et au suivi de vos cadeaux de Noël.</p>
+          
+          <h3>Sécurité des paiements</h3>
+          <p>Aucune coordonnée bancaire n'est stockée sur nos serveurs. Les flux financiers sont traités via des passerelles bancaires certifiées PCI-DSS de niveau 1 avec cryptage SSL 256 bits.</p>
+          
+          <h3>Vos droits</h3>
+          <p>Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit permanent d'accès, de rectification et de suppression de vos données en écrivant à privacy@noelia-noel.fr.</p>
+        `
+      }
+    };
+
+    function openLegalModal(type) {
+      const data = LEGAL_TEXTS[type] || LEGAL_TEXTS.mentions;
+      legalModalTitle.textContent = data.title;
+      legalModalBody.innerHTML = data.content;
+      legalModal.classList.add("active");
+    }
+
+    btnCloseLegalModal.addEventListener("click", () => {
+      legalModal.classList.remove("active");
+    });
+
+    legalModal.addEventListener("click", (e) => {
+      if (e.target === legalModal) legalModal.classList.remove("active");
+    });
+
+    // Écouteur touche Échap pour fermer drawers et modals
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeCart();
+        checkoutModal.classList.remove("active");
+        legalModal.classList.remove("active");
+      }
+    });
+
+    /* ==========================================================================
+       INITIALISATION AU CHARGEMENT
+       ========================================================================== */
+    window.addEventListener("DOMContentLoaded", () => {
+      renderFlashOffers();
+      renderProducts();
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>
+
