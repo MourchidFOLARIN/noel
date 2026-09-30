@@ -2725,7 +2725,554 @@
         display: none !important;
       }
     }
-  </style>
+  
+/* ==========================================================================
+   LES 4 GRANDES FONCTIONNALITÉS FÊTES NOËLIA (EXPÉRIENCE GRANDIOSE)
+   ========================================================================== */
+
+/* 1. MODE VEILLÉE AUX CHANDELLES (NIGHT MODE) */
+body.veillee-mode {
+  --color-creme: #081813;
+  --color-creme-warm: #05100c;
+  --color-card-bg: #0e271f;
+  --color-text: #FBF6EC;
+  --color-text-muted: #D5C9BC;
+  --color-border: rgba(201, 165, 92, 0.45);
+  background-color: var(--color-creme);
+}
+
+body.veillee-mode .site-header {
+  background: rgba(8, 24, 19, 0.96);
+  border-bottom-color: rgba(201, 165, 92, 0.4);
+}
+
+body.veillee-mode .guide-box,
+body.veillee-mode .flash-card,
+body.veillee-mode .product-card,
+body.veillee-mode .trust-section,
+body.veillee-mode .review-card,
+body.veillee-mode .cart-drawer,
+body.veillee-mode .modal-card,
+body.veillee-mode .social-toast,
+body.veillee-mode .cookie-banner,
+body.veillee-mode .recipe-card {
+  background-color: #0e271f;
+  color: #FBF6EC;
+  border-color: rgba(201, 165, 92, 0.4);
+}
+
+body.veillee-mode .product-card:hover,
+body.veillee-mode .flash-card:hover {
+  box-shadow: 0 12px 30px rgba(201, 165, 92, 0.25);
+}
+
+body.veillee-mode .trust-card {
+  background: #091c15;
+}
+
+body.veillee-mode .product-name,
+body.veillee-mode .flash-title,
+body.veillee-mode .trust-title,
+body.veillee-mode .cart-drawer-title,
+body.veillee-mode .nav-link,
+body.veillee-mode .category-name,
+body.veillee-mode .filter-group-title,
+body.veillee-mode .cart-item-title,
+body.veillee-mode .recipe-title {
+  color: #FFFFFF !important;
+}
+
+body.veillee-mode .filter-chip {
+  background: #081813;
+  color: #FBF6EC;
+  border-color: rgba(201, 165, 92, 0.3);
+}
+
+body.veillee-mode .free-shipping-bar-wrap,
+body.veillee-mode .cart-drawer-header,
+body.veillee-mode .cart-drawer-extras,
+body.veillee-mode .cart-drawer-footer {
+  background: #081813;
+  color: #FBF6EC;
+}
+
+body.veillee-mode .form-input,
+body.veillee-mode .promo-input,
+body.veillee-mode .gift-card-textarea {
+  background: #081813;
+  color: #FFFFFF;
+  border-color: rgba(201, 165, 92, 0.4);
+}
+
+/* Boutons Header Ambiance (Veillée, Musique, Wishlist) */
+.header-toggles-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ambient-btn {
+  background: rgba(201, 165, 92, 0.15);
+  border: 1px solid var(--color-or);
+  color: var(--color-sapin);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 13px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+body.veillee-mode .ambient-btn {
+  color: var(--color-or-light);
+  background: rgba(201, 165, 92, 0.12);
+}
+
+.ambient-btn:hover {
+  background: var(--color-or);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.ambient-btn.active {
+  background: var(--color-or);
+  color: var(--color-sapin-dark);
+  box-shadow: 0 0 12px rgba(201, 165, 92, 0.5);
+}
+
+/* POUSSIÈRE D'ÉTOILES (SPARKLES TRAIL) */
+.sparkle-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  font-size: 15px;
+  color: #FFDE94;
+  filter: drop-shadow(0 0 5px #FFC83B);
+  animation: sparkleAnim 0.75s forwards ease-out;
+}
+
+@keyframes sparkleAnim {
+  0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(-50%, -120%) scale(0.2) rotate(90deg); opacity: 0; }
+}
+
+/* BOUTON FLOTTANT ROUE DES MERVEILLES */
+.lucky-wheel-fab {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--color-rouge-noel), var(--color-bordeaux));
+  color: #FFFFFF;
+  border: 2px solid var(--color-or);
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(214, 40, 57, 0.5);
+  z-index: 980;
+  animation: floatFab 3s infinite ease-in-out;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lucky-wheel-fab:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 30px rgba(214, 40, 57, 0.7);
+  border-color: #FFFFFF;
+}
+
+@keyframes floatFab {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* MODAL ROUE DES MERVEILLES */
+.wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 20px;
+}
+
+.wheel-graphic-wrap {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 14px 0 24px;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 24px solid var(--color-rouge-noel);
+  z-index: 10;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+.wheel-svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--color-or), 0 12px 30px rgba(0,0,0,0.3);
+  transition: transform 4.5s cubic-bezier(0.12, 1, 0.22, 1);
+}
+
+.btn-spin-wheel {
+  background: var(--color-rouge-noel);
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 20px rgba(214, 40, 57, 0.4);
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+
+.btn-spin-wheel:hover {
+  background: var(--color-rouge-hover);
+  transform: scale(1.04);
+}
+
+.btn-spin-wheel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.wheel-result-card {
+  display: none;
+  background: var(--color-creme);
+  border: 2px dashed var(--color-or);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  animation: fadeIn 0.4s ease;
+}
+
+body.veillee-mode .wheel-result-card {
+  background: #081813;
+}
+
+/* BAR À PAPIERS CADEAUX & VISUALISEUR */
+.wrap-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.wrap-choice-card {
+  border: 2px solid #E0D5C3;
+  border-radius: var(--radius-sm);
+  padding: 8px 6px;
+  text-align: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: var(--transition);
+}
+
+body.veillee-mode .wrap-choice-card {
+  background: #0e271f;
+  border-color: rgba(201, 165, 92, 0.3);
+}
+
+.wrap-choice-card:hover {
+  border-color: var(--color-or);
+}
+
+.wrap-choice-card.active {
+  border-color: var(--color-bordeaux);
+  background: #FDF4F5;
+  box-shadow: 0 2px 8px rgba(122, 15, 31, 0.15);
+}
+
+body.veillee-mode .wrap-choice-card.active {
+  border-color: var(--color-or);
+  background: #15382c;
+}
+
+.wrap-color-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 0 auto 4px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.25);
+}
+
+.wrap-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.live-package-preview {
+  margin-top: 12px;
+  padding: 12px;
+  background: #FAF7F2;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+body.veillee-mode .live-package-preview {
+  background: #081813;
+}
+
+.preview-box-icon {
+  font-size: 2.2rem;
+  margin-bottom: 2px;
+}
+
+.preview-tag-note {
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--color-bordeaux);
+  margin-top: 4px;
+}
+
+body.veillee-mode .preview-tag-note {
+  color: #FFDE94;
+}
+
+/* WISHLIST (HOTTE DE RÊVES) & BOUTON CŒUR */
+.btn-wish-heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C0392B;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: var(--transition);
+  z-index: 4;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-wish-heart:hover {
+  transform: scale(1.18);
+  background: #FFFFFF;
+}
+
+.btn-wish-heart.active {
+  background: #C0392B;
+  color: #FFFFFF;
+}
+
+.wishlist-count-badge {
+  background: var(--color-or);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  min-width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.gold-card-preview {
+  background: linear-gradient(135deg, #0F3D2E 0%, #09261C 100%);
+  color: #FFFFFF;
+  border: 3px solid var(--color-or);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  margin: 15px 0;
+  position: relative;
+}
+
+.btn-whatsapp-share {
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 800;
+  padding: 12px 22px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  transition: var(--transition);
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.btn-whatsapp-share:hover {
+  background: #1EBE5B;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+/* 4. CARNET DES SECRETS DU RÉVEILLON (RECETTES & TABLES) */
+.secrets-section {
+  padding: 70px 0;
+  background: var(--color-creme-warm);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+body.veillee-mode .secrets-section {
+  background: #05100c;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.recipe-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-or);
+}
+
+.recipe-img-wrap {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .recipe-img-wrap img {
+  transform: scale(1.06);
+}
+
+.recipe-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--color-sapin);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.recipe-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-title {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-sapin);
+  margin-bottom: 6px;
+}
+
+.recipe-ingredients {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.recipe-instructions {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.btn-print-recipe {
+  background: rgba(201, 165, 92, 0.15);
+  color: var(--color-sapin);
+  border: 1px solid var(--color-or);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+body.veillee-mode .btn-print-recipe {
+  color: var(--color-or-light);
+}
+
+.btn-print-recipe:hover {
+  background: var(--color-or);
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+  .lucky-wheel-fab {
+    bottom: 74px;
+    right: 14px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .header-toggles-group {
+    display: none; /* masqué sur très petit écran pour ne pas déborder le header */
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -2792,9 +3339,21 @@
         <a href="#categories" class="nav-link">Catégories</a>
         <a href="#catalogue" class="nav-link">Collection</a>
         <a href="#avis" class="nav-link">Avis</a>
+        <a href="#secrets-fete" class="nav-link">Recettes</a>
       </nav>
 
       <div class="header-actions">
+        <div class="header-toggles-group">
+          <button class="ambient-btn" id="btnThemeToggle" title="Bascule Veillée de Noël aux chandelles">
+            <span>🕯️</span><span id="themeToggleText">Veillée</span>
+          </button>
+          <button class="ambient-btn" id="btnAudioToggle" title="Mélodie de fête féerique">
+            <span>🔔</span><span id="audioToggleText">Mélodie</span>
+          </button>
+          <button class="ambient-btn" id="btnWishlistOpen" title="Ma Hotte de Rêves (Wishlist)">
+            <span>♡</span><span>Hotte (<span id="wishlistCountHeader">0</span>)</span>
+          </button>
+        </div>
         <button class="cart-btn" id="openCartBtn" aria-label="Ouvrir le panier">
           <span aria-hidden="true">🎁</span>
           <span>Panier</span>
@@ -3227,6 +3786,116 @@
   <!-- ==========================================================================
        12. PIED DE PAGE (FOOTER)
        ========================================================================== -->
+  
+    <!-- ==========================================================================
+         CARNET DES SECRETS DU RÉVEILLON (RECETTES & TABLES DE FÊTE)
+         ========================================================================== -->
+    <section class="secrets-section" id="secrets-fete">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">✦ L'Art de Vivre & de Recevoir ✦</span>
+          <h2 class="title-festive section-title">Les Secrets Gourmands du <em>Réveillon</em></h2>
+          <p class="section-desc">
+            Nos fiches recettes traditionnelles et astuces d'hôtes offertes pour enchanter vos tablées familiales le 24 décembre.
+          </p>
+        </div>
+
+        <div class="recipes-grid">
+          <!-- Recette 1 -->
+          <article class="recipe-card">
+            <div class="recipe-img-wrap">
+              <span class="recipe-badge">Tradition Alsacienne</span>
+              <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=500&q=80" 
+                   alt="Pain d'épices de Noël" 
+                   loading="lazy" 
+                   onerror="handleImgError(this)">
+            </div>
+            <div class="recipe-body">
+              <h3 class="recipe-title">Pain d'Épices Royal aux 7 Épices</h3>
+              <div class="recipe-ingredients">
+                Miel de châtaignier, farine de seigle, cannelle de Ceylan, badiane, cardamome, zeste d'orange confite.
+              </div>
+              <p class="recipe-instructions">
+                Laissez reposer la pâte 24h au frais avant cuisson douce à 150°C. Badigeonnez d'un sirop chaud au miel dès la sortie du four pour une brillance dorée digne d'un banquet de fête.
+              </p>
+              <button class="btn-print-recipe" onclick="printRecipe('Pain d'Épices Royal aux 7 Épices')">
+                <span>🖨️</span> Imprimer la recette
+              </button>
+            </div>
+          </article>
+
+          <!-- Recette 2 -->
+          <article class="recipe-card">
+            <div class="recipe-img-wrap">
+              <span class="recipe-badge">Entrée Signature</span>
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" 
+                   alt="Foie gras poêlé aux figues" 
+                   loading="lazy" 
+                   onerror="handleImgError(this)">
+            </div>
+            <div class="recipe-body">
+              <h3 class="recipe-title">Foie Gras Poêlé & Figues au Porto</h3>
+              <div class="recipe-ingredients">
+                Escalopes de foie gras frais du Sud-Ouest, figues violettes, réduction de porto rouge, fleur de sel de Guérande.
+              </div>
+              <p class="recipe-instructions">
+                Saisissez les escalopes 1 min 30 par face dans une poêle fumante sans matière grasse. Dressez sur un pain brioché tiédi avec une larme de compotée de figues chaudes.
+              </p>
+              <button class="btn-print-recipe" onclick="printRecipe('Foie Gras Poêlé & Figues au Porto')">
+                <span>🖨️</span> Imprimer la recette
+              </button>
+            </div>
+          </article>
+
+          <!-- Recette 3 -->
+          <article class="recipe-card">
+            <div class="recipe-img-wrap">
+              <span class="recipe-badge">Douceur Enchantée</span>
+              <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=500&q=80" 
+                   alt="Sablés de Noël cannelle" 
+                   loading="lazy" 
+                   onerror="handleImgError(this)">
+            </div>
+            <div class="recipe-body">
+              <h3 class="recipe-title">Étoiles Sablées & Glaçage Royal</h3>
+              <div class="recipe-ingredients">
+                Beurre d'Isigny AOP, poudre d'amandes douces, cannelle moulue, sucre glace et jus de citron pour le glaçage.
+              </div>
+              <p class="recipe-instructions">
+                Découpez des étoiles de tailles variées avec vos enfants. Après cuisson, dessinez de délicates dentelles blanches avec une douille fine. Parfait pour suspendre au sapin !
+              </p>
+              <button class="btn-print-recipe" onclick="printRecipe('Étoiles Sablées & Glaçage Royal')">
+                <span>🖨️</span> Imprimer la recette
+              </button>
+            </div>
+          </article>
+
+          <!-- Recette 4 -->
+          <article class="recipe-card">
+            <div class="recipe-img-wrap">
+              <span class="recipe-badge">Art de la Table</span>
+              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80" 
+                   alt="Table de réveillon féerique" 
+                   loading="lazy" 
+                   onerror="handleImgError(this)">
+            </div>
+            <div class="recipe-body">
+              <h3 class="recipe-title">Table Féerique & Pliage Sapin</h3>
+              <div class="recipe-ingredients">
+                Nappe en lin crème, branches de sapin frais, pommes de pin dorées, serviettes vert sapin, bougies cire d'abeille.
+              </div>
+              <p class="recipe-instructions">
+                Pliez vos serviettes en 4 puis en accordéon pour former un petit sapin d'assiette surmonté d'une étoile d'anis étoilée. Parsemez la table de bâtons de cannelle pour le parfum.
+              </p>
+              <button class="btn-print-recipe" onclick="printRecipe('Table Féerique & Pliage Sapin')">
+                <span>🖨️</span> Imprimer le guide
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -3327,10 +3996,45 @@
             <span>🎁 Emballage cadeau féerique offert</span>
           </label>
           <div class="gift-card-textarea-box" id="giftCardTextBox">
+            <div style="font-size:0.78rem; font-weight:700; color:var(--color-sapin); margin:8px 0 4px;">Choisissez votre style d'emballage :</div>
+            <div class="wrap-selector-grid">
+              <div class="wrap-choice-card active" data-wrap="bordeaux">
+                <div class="wrap-color-dot" style="background:#7A0F1F;"></div>
+                <div class="wrap-title">Bordeaux & Or Satin</div>
+              </div>
+              <div class="wrap-choice-card" data-wrap="sapin">
+                <div class="wrap-color-dot" style="background:#0F3D2E;"></div>
+                <div class="wrap-title">Sapin & Cordon Lin</div>
+              </div>
+              <div class="wrap-choice-card" data-wrap="nuit">
+                <div class="wrap-color-dot" style="background:#1B2A4A;"></div>
+                <div class="wrap-title">Nuit & Ruban Argent</div>
+              </div>
+            </div>
+
+            <div class="live-package-preview" id="livePackagePreview">
+              <div class="preview-box-icon" id="previewBoxEmoji">🎁</div>
+              <strong id="previewWrapName" style="font-size:0.82rem; color:var(--color-sapin);">Bordeaux Impérial & Ruban d'or</strong>
+              <div class="preview-tag-note" id="previewTagNote">« Votre mot doux apparaîtra ici »</div>
+            </div>
+
             <textarea class="gift-card-textarea" 
                       id="giftCardMessage" 
-                      placeholder="Votre mot doux pour la carte (ex : Joyeux Noël de la part de...)"></textarea>
+                      placeholder="Votre mot doux pour la carte (ex : Joyeux Noël de la part de...)" style="margin-top:8px;"></textarea>
           </div>
+        </div>
+
+        <!-- Deuxième upsell : Boîte Mystère de Noël -->
+        <div class="upsell-box" id="cartMysteryBox" style="margin-top:8px;">
+          <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=150&q=80" 
+               alt="Boîte Mystère de Noël" 
+               class="upsell-thumb" 
+               onerror="handleImgError(this)">
+          <div class="upsell-info">
+            <div class="upsell-title">Boîte Mystère de Noël (Valeur 65 €)</div>
+            <div class="upsell-price">+ 39,00 €</div>
+          </div>
+          <button class="btn-upsell-add" onclick="addToCart(992)">+ Ajouter</button>
         </div>
 
         <!-- Vente additionnelle upsell à 9 € -->
@@ -3763,6 +4467,10 @@
     /* ==========================================================================
        GESTION DU PANIER & ÉTAT DE L'APPLICATION
        ========================================================================== */
+        let wishlist = [];
+    try {
+      wishlist = JSON.parse(localStorage.getItem("noelia_wishlist_2026") || "[]");
+    } catch(e) {}
     let cart = [];
     let promoCodeApplied = null; // 'NOEL10'
     let giftWrapSelected = false;
@@ -3895,6 +4603,7 @@
             <div class="product-img-box">
               <span class="${badgeClass}">${prod.badge}</span>
               <span class="badge-discount-tag">-${discountPct}%</span>
+              <button class="btn-wish-heart ${wishlist.includes(prod.id) ? 'active' : ''}" onclick="toggleWishlist(${prod.id}, this)" title="Ajouter à ma hotte de rêves">♡</button>
               <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="handleImgError(this)">
             </div>
             <div class="product-info">
@@ -3975,6 +4684,14 @@
           name: "Sachet de 6 Truffes fondantes d'antan",
           price: 9.00,
           image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=150&q=80"
+        };
+      }
+      if (id === 992) {
+        return {
+          id: 992,
+          name: "Boîte Mystère de Noël (Valeur 65 €)",
+          price: 39.00,
+          image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=150&q=80"
         };
       }
       const prod = PRODUCTS.find(p => p.id === id);
@@ -4124,7 +4841,17 @@
       // État promo UI
       const promoBadge = document.getElementById("promoBadge");
       const promoInputRow = document.getElementById("promoInputRow");
-      if (promoCodeApplied === "NOEL10") {
+      if (promoCodeApplied) {
+        let label = "Code <strong>" + promoCodeApplied + "</strong> appliqué";
+        if (promoCodeApplied === "NOEL10") label += " (-10%)";
+        if (promoCodeApplied === "ETOILE15") label += " (-15%)";
+        if (promoCodeApplied === "LIVRNOEL") label += " (Port Offert)";
+        promoBadge.innerHTML = `<span>${label}</span><button type="button" id="btnRemovePromo" style="color:#C0392B;font-size:0.8rem;text-decoration:underline;background:none;border:none;cursor:pointer;">Retirer</button>`;
+        document.getElementById("btnRemovePromo").onclick = () => {
+          promoCodeApplied = null;
+          saveCart();
+          updateCartUI();
+        };
         promoBadge.style.display = "flex";
         promoInputRow.style.display = "none";
       } else {
@@ -4137,14 +4864,14 @@
     document.getElementById("btnApplyPromo").addEventListener("click", () => {
       const input = document.getElementById("promoCodeInput");
       const val = input.value.trim().toUpperCase();
-      if (val === "NOEL10") {
-        promoCodeApplied = "NOEL10";
+      if (val === "NOEL10" || val === "ETOILE15" || val === "LIVRNOEL") {
+        promoCodeApplied = val;
         input.value = "";
         saveCart();
         updateCartUI();
-        alert("✨ Code NOEL10 appliqué : -10% de remise sur votre commande !");
+        alert(`✨ Code privilège ${val} activé avec succès !`);
       } else {
-        alert("Le code saisi n'est pas valide. Utilisez NOEL10 pour -10%.");
+        alert("Le code saisi n'est pas valide. Ex: NOEL10 (-10%) ou tentez votre chance à la Roue des Merveilles !");
       }
     });
 
@@ -4626,7 +5353,463 @@
       renderProducts();
       updateCartUI();
     });
+  
+    /* ==========================================================================
+       LES 4 MODULES FÊTES NOËLIA (AUDIO, AMBIANCE, ROUE, WISHLIST, CARNET)
+       ========================================================================== */
+
+    // 1. MOTEUR AUDIO FESTIF (WEB AUDIO API PURE - ZÉRO DÉPENDANCE)
+    const AudioEngine = {
+      ctx: null,
+      musicPlaying: false,
+      timer: null,
+      init() {
+        if (!this.ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) this.ctx = new AudioCtx();
+        }
+      },
+      playChime() {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          if (this.ctx.state === 'suspended') this.ctx.resume();
+          const now = this.ctx.currentTime;
+          // Doux carillon céleste cristallin (C6, E6, G6, C7)
+          const notes = [1046.50, 1318.51, 1567.98, 2093.00];
+          notes.forEach((freq, i) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now + i * 0.07);
+            gain.gain.setValueAtTime(0.06, now + i * 0.07);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.07 + 0.7);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(now + i * 0.07);
+            osc.stop(now + i * 0.07 + 0.7);
+          });
+        } catch (e) {}
+      },
+      toggleMusic(btn) {
+        this.init();
+        if (!this.ctx) return;
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+        this.musicPlaying = !this.musicPlaying;
+        const textSpan = document.getElementById("audioToggleText");
+        if (this.musicPlaying) {
+          btn.classList.add("active");
+          btn.querySelector("span:first-child").textContent = "🔔";
+          if (textSpan) textSpan.textContent = "Musique : On";
+          this.startMelody();
+        } else {
+          btn.classList.remove("active");
+          btn.querySelector("span:first-child").textContent = "🔕";
+          if (textSpan) textSpan.textContent = "Mélodie";
+          this.stopMelody();
+        }
+      },
+      startMelody() {
+        // Mélodie chaleureuse carillon de Noël (Douce Nuit / Carillon feutré)
+        const melody = [
+          { f: 523.25, d: 0.5 }, { f: 587.33, d: 0.5 }, { f: 659.25, d: 0.7 },
+          { f: 523.25, d: 0.5 }, { f: 659.25, d: 0.5 }, { f: 783.99, d: 0.9 },
+          { f: 659.25, d: 0.4 }, { f: 587.33, d: 0.4 }, { f: 523.25, d: 0.9 }
+        ];
+        let idx = 0;
+        const tick = () => {
+          if (!this.musicPlaying) return;
+          const note = melody[idx % melody.length];
+          const now = this.ctx.currentTime;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(note.f, now);
+          gain.gain.setValueAtTime(0.035, now);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + note.d);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now);
+          osc.stop(now + note.d);
+          idx++;
+          this.timer = setTimeout(tick, note.d * 1000 + 400);
+        };
+        tick();
+      },
+      stopMelody() {
+        if (this.timer) clearTimeout(this.timer);
+      }
+    };
+
+    document.getElementById("btnAudioToggle").addEventListener("click", function() {
+      AudioEngine.toggleMusic(this);
+    });
+
+    // 2. MODE VEILLÉE DE NOËL AUX CHANDELLES (CANDLELIGHT THEME)
+    const btnThemeToggle = document.getElementById("btnThemeToggle");
+    const themeToggleText = document.getElementById("themeToggleText");
+
+    function applyTheme(isNight) {
+      if (isNight) {
+        document.body.classList.add("veillee-mode");
+        btnThemeToggle.classList.add("active");
+        btnThemeToggle.querySelector("span:first-child").textContent = "✨";
+        if (themeToggleText) themeToggleText.textContent = "Nuit";
+      } else {
+        document.body.classList.remove("veillee-mode");
+        btnThemeToggle.classList.remove("active");
+        btnThemeToggle.querySelector("span:first-child").textContent = "🕯️";
+        if (themeToggleText) themeToggleText.textContent = "Veillée";
+      }
+    }
+
+    try {
+      if (localStorage.getItem("noelia_night_mode") === "true") {
+        applyTheme(true);
+      }
+    } catch(e) {}
+
+    btnThemeToggle.addEventListener("click", () => {
+      const isNight = document.body.classList.toggle("veillee-mode");
+      applyTheme(isNight);
+      try {
+        localStorage.setItem("noelia_night_mode", isNight ? "true" : "false");
+      } catch(e) {}
+    });
+
+    // 3. SILLAGE D'ÉTOILES DORÉES (SPARKLES TRAIL SUR DESKTOP)
+    let lastSparkleTime = 0;
+    window.addEventListener("mousemove", (e) => {
+      if (prefersReducedMotion || window.innerWidth < 768) return;
+      const now = Date.now();
+      if (now - lastSparkleTime < 50) return;
+      lastSparkleTime = now;
+
+      const sparkle = document.createElement("span");
+      sparkle.className = "sparkle-particle";
+      sparkle.textContent = Math.random() > 0.5 ? "✦" : "★";
+      sparkle.style.left = e.clientX + (Math.random() * 14 - 7) + "px";
+      sparkle.style.top = e.clientY + (Math.random() * 14 - 7) + "px";
+      sparkle.style.fontSize = (Math.random() * 10 + 10) + "px";
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), 750);
+    });
+
+    // 4. ROUE DES MERVEILLES DE NOËL
+    const btnOpenWheel = document.getElementById("btnOpenWheel");
+    const wheelModal = document.getElementById("wheelModal");
+    const btnCloseWheelModal = document.getElementById("btnCloseWheelModal");
+    const btnSpin = document.getElementById("btnSpin");
+    const wheelSvg = document.getElementById("wheelSvg");
+    const wheelResultCard = document.getElementById("wheelResultCard");
+    const wheelPrizeTitle = document.getElementById("wheelPrizeTitle");
+    const wheelPrizeDesc = document.getElementById("wheelPrizeDesc");
+    const btnClaimWheelPrize = document.getElementById("btnClaimWheelPrize");
+
+    btnOpenWheel.addEventListener("click", () => {
+      wheelModal.classList.add("active");
+    });
+    btnCloseWheelModal.addEventListener("click", () => {
+      wheelModal.classList.remove("active");
+    });
+
+    const WHEEL_PRIZES = [
+      { code: "ETOILE15", title: "✦ -15% sur Tout le Site ! ✦", desc: "Code privilège ETOILE15 débloqué pour votre commande.", discount: 0.15 },
+      { code: "TRUFFES", title: "🎁 Sachet de Truffes Artisanales Offert !", desc: "Un sachet de 6 truffes d'antan offert dans votre hotte.", freeItem: 991 },
+      { code: "LIVRNOEL", title: "🚚 Livraison Colissimo Offerte !", desc: "Votre livraison offerte sans minimum d'achat.", freeShipping: true },
+      { code: "BOUGIE", title: "🕯️ Bougie Miniature de Noël Offerte !", desc: "Une bougie parfumée offerte dès 40€ d'achats.", gift: true },
+      { code: "NOEL10", title: "✨ -10% de Réduction Immédiate !", desc: "Code NOEL10 applicable immédiatement à votre panier.", discount: 0.10 },
+      { code: "VIPSOIE", title: "🎀 Emballage Cadeau VIP en Soie Offert !", desc: "Votre emballage royal avec ruban de soie offert.", vipWrap: true }
+    ];
+
+    let currentPrize = null;
+    let wheelSpun = false;
+
+    btnSpin.addEventListener("click", () => {
+      if (wheelSpun) {
+        alert("Vous avez déjà fait tourner la roue pour cette visite !");
+        return;
+      }
+      btnSpin.disabled = true;
+      AudioEngine.playChime();
+
+      // Choisir un index gagnant
+      const winIndex = Math.floor(Math.random() * WHEEL_PRIZES.length);
+      currentPrize = WHEEL_PRIZES[winIndex];
+
+      // Angle: 6 segments = 60 deg chacun. Centrer le segment gagnant sur le pointeur en haut
+      const segmentDeg = 60;
+      const targetDeg = 3600 + (360 - (winIndex * segmentDeg + 30));
+      wheelSvg.style.transform = `rotate(${targetDeg}deg)`;
+
+      setTimeout(() => {
+        wheelSpun = true;
+        wheelResultCard.style.display = "block";
+        wheelPrizeTitle.textContent = currentPrize.title;
+        wheelPrizeDesc.textContent = currentPrize.desc;
+        btnSpin.style.display = "none";
+        AudioEngine.playChime();
+      }, 4600);
+    });
+
+    btnClaimWheelPrize.addEventListener("click", () => {
+      if (!currentPrize) return;
+      if (currentPrize.code === "ETOILE15" || currentPrize.code === "NOEL10" || currentPrize.code === "LIVRNOEL") {
+        promoCodeApplied = currentPrize.code;
+      } else if (currentPrize.freeItem) {
+        addToCart(currentPrize.freeItem, false);
+      }
+      if (currentPrize.vipWrap) {
+        giftWrapSelected = true;
+        document.getElementById("giftWrapCheck").checked = true;
+        document.getElementById("giftCardTextBox").classList.add("active");
+      }
+      saveCart();
+      updateCartUI();
+      wheelModal.classList.remove("active");
+      openCart();
+      alert(`✨ Félicitations ! Votre privilège « ${currentPrize.title} » est activé dans votre panier.`);
+    });
+
+    // 5. BAR À PAPIERS CADEAUX & VISUALISEUR EN DIRECT
+    const wrapChoices = document.querySelectorAll(".wrap-choice-card");
+    const previewBoxEmoji = document.getElementById("previewBoxEmoji");
+    const previewWrapName = document.getElementById("previewWrapName");
+    const previewTagNote = document.getElementById("previewTagNote");
+
+    const WRAP_STYLES = {
+      bordeaux: { name: "Bordeaux Impérial & Ruban d'or", emoji: "🎁" },
+      sapin: { name: "Vert Sapin Givré & Cordon de lin", emoji: "🎄" },
+      nuit: { name: "Nuit Boréale & Ruban argenté", emoji: "✨" }
+    };
+
+    wrapChoices.forEach(card => {
+      card.addEventListener("click", () => {
+        wrapChoices.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+        const style = WRAP_STYLES[card.dataset.wrap] || WRAP_STYLES.bordeaux;
+        previewBoxEmoji.textContent = style.emoji;
+        previewWrapName.textContent = style.name;
+        AudioEngine.playChime();
+      });
+    });
+
+    document.getElementById("giftCardMessage").addEventListener("input", (e) => {
+      previewTagNote.textContent = e.target.value.trim() ? `« ${e.target.value} »` : "« Votre mot doux apparaîtra ici »";
+    });
+
+    // 6. WISHLIST (HOTTE DE RÊVES) & CARTE DE VŒUX PARTAGEABLE
+    function updateWishlistCount() {
+      const el = document.getElementById("wishlistCountHeader");
+      if (el) el.textContent = wishlist.length;
+    }
+    updateWishlistCount();
+
+    window.toggleWishlist = function(productId, btn) {
+      const idx = wishlist.indexOf(productId);
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+        if (btn) btn.classList.remove("active");
+      } else {
+        wishlist.push(productId);
+        if (btn) btn.classList.add("active");
+        AudioEngine.playChime();
+      }
+      try {
+        localStorage.setItem("noelia_wishlist_2026", JSON.stringify(wishlist));
+      } catch(e) {}
+      updateWishlistCount();
+    };
+
+    const wishlistModal = document.getElementById("wishlistModal");
+    const btnWishlistOpen = document.getElementById("btnWishlistOpen");
+    const btnCloseWishlistModal = document.getElementById("btnCloseWishlistModal");
+    const wishlistItemsList = document.getElementById("wishlistItemsList");
+
+    btnWishlistOpen.addEventListener("click", () => {
+      renderWishlistItems();
+      wishlistModal.classList.add("active");
+    });
+    btnCloseWishlistModal.addEventListener("click", () => {
+      wishlistModal.classList.remove("active");
+    });
+
+    function renderWishlistItems() {
+      if (wishlist.length === 0) {
+        wishlistItemsList.innerHTML = `
+          <div style="text-align:center; padding:20px; color:var(--color-text-muted);">
+            <div style="font-size:2.5rem; margin-bottom:6px;">♡</div>
+            <p>Votre Hotte de Rêves est vide pour l'instant.</p>
+            <p style="font-size:0.8rem;">Cliquez sur le petit cœur des créations pour les ajouter à votre liste de souhaits.</p>
+          </div>
+        `;
+        return;
+      }
+      wishlistItemsList.innerHTML = wishlist.map(id => {
+        const p = findProductById(id);
+        if (!p) return "";
+        return `
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px; border-bottom:1px solid #ECE3D2; padding-bottom:8px;">
+            <img src="${p.image}" alt="${p.name}" style="width:48px; height:48px; border-radius:6px; object-fit:cover;">
+            <div style="flex:1;">
+              <div style="font-weight:700; font-size:0.88rem; color:var(--color-sapin);">${p.name}</div>
+              <div style="color:var(--color-rouge-noel); font-weight:800; font-size:0.85rem;">${p.price.toFixed(2).replace('.', ',')} €</div>
+            </div>
+            <button class="btn btn-primary" onclick="addToCart(${p.id});" style="padding:6px 12px; font-size:0.78rem;">
+              <span>🛒</span> Au panier
+            </button>
+            <button onclick="toggleWishlist(${p.id}); renderWishlistItems();" style="background:none; border:none; color:#C0392B; cursor:pointer; font-size:1.1rem;" title="Retirer">✕</button>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Générateur de Carte de Vœux Dorée
+    const btnGenerateCard = document.getElementById("btnGenerateCard");
+    const goldCardDisplayArea = document.getElementById("goldCardDisplayArea");
+    const cardAuthorName = document.getElementById("cardAuthorName");
+    const cardDisplayMessage = document.getElementById("cardDisplayMessage");
+    const cardProductsSummary = document.getElementById("cardProductsSummary");
+    const btnShareWhatsApp = document.getElementById("btnShareWhatsApp");
+
+    btnGenerateCard.addEventListener("click", () => {
+      const sender = document.getElementById("wishlistSenderName").value.trim() || "Moi";
+      const recipient = document.getElementById("wishlistRecipientName").value.trim() || "Mes proches";
+      const msg = document.getElementById("wishlistCustomMsg").value.trim() || "Voici mes plus doux souhaits pour un Noël féerique et inoubliable.";
+
+      cardAuthorName.textContent = sender;
+      cardDisplayMessage.textContent = `Chers ${recipient}, ${msg}`;
+
+      const items = wishlist.map(id => findProductById(id)).filter(Boolean);
+      cardProductsSummary.innerHTML = items.length > 0 
+        ? `<strong>Mes coups de cœur Noëlia :</strong><br>` + items.map(i => `• ${i.name} (${i.price.toFixed(2).replace('.', ',')} €)`).join("<br>")
+        : "<em>Toute la collection féerique Noëlia Paris me ferait rêver !</em>";
+
+      // Préparation lien WhatsApp
+      const shareText = encodeURIComponent(`🎄 Coucou ! Découvre ma liste de souhaits de Noël Noëlia 2026 :\n${items.map(i => '- ' + i.name).join('\n')}\n\nRetrouve ma sélection sur https://noel-ashen.vercel.app ✨`);
+      btnShareWhatsApp.href = `https://api.whatsapp.com/send?text=${shareText}`;
+
+      goldCardDisplayArea.style.display = "block";
+      AudioEngine.playChime();
+    });
+
+    // Impression de fiche recette
+    window.printRecipe = function(title) {
+      alert(`🖨️ Préparation de la fiche recette : « ${title} » pour impression.`);
+      window.print();
+    };
+
+    // Amélioration de addToCart pour déclencher le carillon cristallin
+    const originalAddToCart = addToCart;
+    addToCart = function(productId, openNow = true) {
+      originalAddToCart(productId, openNow);
+      AudioEngine.playChime();
+    };
+
   </script>
+
+  <!-- BOUTON FLOTTANT ROUE DES MERVEILLES -->
+  <button class="lucky-wheel-fab" id="btnOpenWheel" aria-label="Tourner la Roue des Merveilles">
+    <span style="font-size:1.3rem;">🎡</span>
+    <span>Roue des Merveilles</span>
+  </button>
+
+  <!-- MODAL ROUE DES MERVEILLES -->
+  <div class="modal-backdrop" id="wheelModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 500px;" role="dialog" aria-modal="true" aria-labelledby="wheelModalTitle">
+      <div class="modal-header">
+        <h3 class="modal-title" id="wheelModalTitle"><span>🎡</span> Roue des Merveilles de Noël</h3>
+        <button class="btn-close-modal" id="btnCloseWheelModal" aria-label="Fermer">✕</button>
+      </div>
+      <div class="modal-body wheel-container">
+        <p style="text-align:center; font-size:0.95rem; color:var(--color-text-muted); margin-bottom:10px;">
+          Tournez la grande roue féerique pour décrocher votre privilège de fête avant le réveillon !
+        </p>
+
+        <div class="wheel-graphic-wrap">
+          <div class="wheel-pointer"></div>
+          <svg class="wheel-svg" id="wheelSvg" viewBox="0 0 280 280">
+            <!-- 6 Segments festifs dessinés en SVG -->
+            <path d="M 140 140 L 140 0 A 140 140 0 0 1 261.2 70 Z" fill="#7A0F1F"/>
+            <path d="M 140 140 L 261.2 70 A 140 140 0 0 1 261.2 210 Z" fill="#0F3D2E"/>
+            <path d="M 140 140 L 261.2 210 A 140 140 0 0 1 140 280 Z" fill="#C9A55C"/>
+            <path d="M 140 140 L 140 280 A 140 140 0 0 1 18.8 210 Z" fill="#D62839"/>
+            <path d="M 140 140 L 18.8 210 A 140 140 0 0 1 18.8 70 Z" fill="#09261C"/>
+            <path d="M 140 140 L 18.8 70 A 140 140 0 0 1 140 0 Z" fill="#B01F2F"/>
+            <!-- Textes des lots -->
+            <text x="180" y="55" fill="#FFF" font-size="11" font-weight="700" transform="rotate(30 180 55)">-15% SITE</text>
+            <text x="210" y="145" fill="#FFF" font-size="10" font-weight="700" transform="rotate(90 210 145)">TRUFFES 0€</text>
+            <text x="175" y="225" fill="#09261C" font-size="10" font-weight="800" transform="rotate(150 175 225)">PORT 0€</text>
+            <text x="95" y="225" fill="#FFF" font-size="10" font-weight="700" transform="rotate(210 95 225)">BOUGIE 0€</text>
+            <text x="65" y="145" fill="#FFF" font-size="11" font-weight="700" transform="rotate(270 65 145)">-10% CODE</text>
+            <text x="95" y="55" fill="#FFF" font-size="10" font-weight="700" transform="rotate(330 95 55)">VIP SOIE</text>
+            <circle cx="140" cy="140" r="26" fill="#FBF6EC" stroke="#C9A55C" stroke-width="4"/>
+            <text x="140" y="145" fill="#7A0F1F" font-size="16" font-weight="bold" text-anchor="middle">🎁</text>
+          </svg>
+        </div>
+
+        <button class="btn-spin-wheel" id="btnSpin">Tourner la roue féerique</button>
+
+        <div class="wheel-result-card" id="wheelResultCard">
+          <h4 id="wheelPrizeTitle" style="font-family:var(--font-title); font-size:1.3rem; color:var(--color-bordeaux); margin-bottom:6px;"></h4>
+          <p id="wheelPrizeDesc" style="font-size:0.9rem; margin-bottom:12px;"></p>
+          <button class="btn btn-primary" id="btnClaimWheelPrize" style="width:100%;">
+            <span>🎁</span> Appliquer mon privilège au panier
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL WISHLIST & CARTE DE VŒUX -->
+  <div class="modal-backdrop" id="wishlistModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 600px;" role="dialog" aria-modal="true" aria-labelledby="wishlistModalTitle">
+      <div class="modal-header">
+        <h3 class="modal-title" id="wishlistModalTitle"><span>💌</span> Ma Hotte de Rêves & Carte de Vœux</h3>
+        <button class="btn-close-modal" id="btnCloseWishlistModal" aria-label="Fermer">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="wishlistItemsList" style="margin-bottom:18px;">
+          <!-- Articles favoris injectés -->
+        </div>
+
+        <div style="border-top:1px solid var(--color-border); padding-top:16px;">
+          <h4 style="font-family:var(--font-title); font-size:1.15rem; color:var(--color-sapin); margin-bottom:8px;">
+            ✦ Personnalisez votre Carte de Vœux à Partager ✦
+          </h4>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+            <input type="text" class="form-input" id="wishlistSenderName" placeholder="Votre prénom (ex: Camille)">
+            <input type="text" class="form-input" id="wishlistRecipientName" placeholder="Pour qui ? (ex: Ma chère famille)">
+          </div>
+          <textarea class="gift-card-textarea" id="wishlistCustomMsg" placeholder="Votre mot doux de Noël (ex: Voici quelques trésors qui illumineraient mon 24 décembre au pied du grand sapin...)"></textarea>
+          
+          <button class="btn btn-primary" id="btnGenerateCard" style="width:100%; margin-top:12px;">
+            <span>✨</span> Générer ma Carte de Vœux Dorée
+          </button>
+        </div>
+
+        <div id="goldCardDisplayArea" style="display:none; margin-top:20px;">
+          <div class="gold-card-preview" id="goldCardContent">
+            <h3 style="font-family:var(--font-title); font-size:1.5rem; color:#FFDE94; margin-bottom:6px;">Noëlia · Paris</h3>
+            <p style="font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-or-light); margin-bottom:14px;">La Liste de Noël de <span id="cardAuthorName">Moi</span></p>
+            <p id="cardDisplayMessage" style="font-style:italic; font-size:0.95rem; margin-bottom:16px; line-height:1.5; color:#FBF6EC;"></p>
+            <div id="cardProductsSummary" style="font-size:0.85rem; border-top:1px solid rgba(201,165,92,0.4); padding-top:10px; text-align:left;"></div>
+          </div>
+
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <a href="#" id="btnShareWhatsApp" class="btn-whatsapp-share" target="_blank">
+              <span>💬</span> Partager sur WhatsApp
+            </a>
+            <button class="btn btn-secondary" onclick="window.print()" style="margin-top:10px;">
+              <span>🖨️</span> Imprimer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
 
